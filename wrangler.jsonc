@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "ksa-archive-net",
+  "name": "ksa-archive-website",
   "compatibility_date": "2026-05-05",
   "observability": {
     "enabled": true
