@@ -258,7 +258,7 @@ builds.forEach(([ver, build, date, comment, winFile, linuxFile]) => {
 
   const winCell = winFile
     ? `<a class="dl-link" href="${R2}/${build}/${winFile}">↓ Windows</a>`
-    : `<span class="no-torrent">missing</span>`;
+    : `<span class="no-version">missing</span>`;
 
   const linuxCell = linuxFile
     ? `<a class="dl-link linux" href="${R2}/${build}/${linuxFile}">↓ Linux</a>`
