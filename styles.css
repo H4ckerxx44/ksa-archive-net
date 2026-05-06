@@ -314,7 +314,7 @@ td {
     background: rgba(91, 140, 255, 0.1);
     border: 1px solid rgba(91, 140, 255, 0.3);
     color: var(--accent2);
-    text-decoration: none;
+    text-decoration: underline;
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 12px;
