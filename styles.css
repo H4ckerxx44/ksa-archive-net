@@ -322,6 +322,14 @@ td {
     transition: background 0.15s, border-color 0.15s;
 }
 
+.dl-link:active, .dl-link.linux:active {
+    color: yellow;
+}
+
+.dl-link:visited, .dl-link.linux:visited {
+    color: red;
+}
+
 .dl-link:hover {
     background: rgba(91, 140, 255, 0.2);
     border-color: rgba(91, 140, 255, 0.6);
