@@ -11,6 +11,7 @@ Source behind https://ksa-archive.net.
 
 The purpose of this repository is to preserve every possible version of the game.
 That gives everyone the opportunity to go back to the very early days of the game and see how it evolved and how it turned into whatever it will turn into in the future.
+
 ---
 
 ## Contributing
