@@ -3,6 +3,7 @@
 [![forthebadge](https://forthebadge.com/badges/contains-tasty-spaghetti-code.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/api/badges/generate?panels=2&primaryLabel=MADE+WITH&secondaryLabel=%E2%9D%A4%EF%B8%8E&primaryBGColor=%23ff7f7f&secondaryBGColor=%23ff6b6b&primaryTextColor=%23FFFFFF&primaryFontSize=12&primaryFontWeight=600&primaryLetterSpacing=2&primaryFontFamily=Roboto&primaryTextTransform=uppercase&secondaryTextColor=%23FFFFFF&secondaryFontSize=16&secondaryFontWeight=900&secondaryLetterSpacing=2&secondaryFontFamily=Montserrat&secondaryTextTransform=uppercase)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
+
 ---
 
 ## Purpose
@@ -11,7 +12,6 @@ Source behind https://ksa-archive.net.
 
 The purpose of this repository is to preserve every possible version of the game.
 That gives everyone the opportunity to go back to the very early days of the game and see how it evolved and how it turned into whatever it will turn into in the future.
----
 
 ## Contributing
 
@@ -19,9 +19,8 @@ You have a build which the archive is missing? You can help:
 - **Open an issue** with the build number and the installer file(s)
 
 or
-- **Contact me on Discord** - You will find me by the name: `suedgeorgien`
 
----
+- **Contact me on Discord** - You will find me by the name: `suedgeorgien`
 
 ## Permissions
 
