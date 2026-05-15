@@ -7,7 +7,7 @@ const label = document.getElementById("toggleLabel");
 // - Build data -
 // Each entry: [ver, build, date, comment, winFile, linuxFile]
 // winFile / linuxFile are the exact filenames in the R2 bucket, or null if absent.
-const R2 = "https://pub-c4362e6081bd44b39b51dd3d7a73a5cf.r2.dev/builds";
+const R2 = "https://files.ksa-archive.net/builds";
 const builds = [
     [1, 2076, "2025-08-15", "first build(?)", "setup_ksa_v2025.8.43.2076.exe", null],
     [2, 2088, "2025-08-18", "", "setup_ksa_v2025.8.17.2088.exe", null],
