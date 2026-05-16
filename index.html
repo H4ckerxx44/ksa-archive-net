@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitten Space Agency - Archive</title>
 
-    <!-- DNS + TLS handshake for Google Fonts done early -->
+  <!--
+    Prevent FOUC: apply saved theme before first paint.
+    Intentionally inline and before the stylesheet.
+  -->
+    <script>
+      try {
+        const t = localStorage.getItem("ksa-theme");
+        if (t)
+        {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      }
+      catch {}
+    </script>
+
+
+  <!-- DNS + TLS handshake for Google Fonts done early -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -126,6 +142,6 @@
     </footer>
 </div>
 
-<script src="main.js" defer></script>
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

@@ -1,9 +1,39 @@
+import './styles.css';
+
 // Config
 const R2_BASE_URL = "https://files.ksa-archive.net/builds";
-const KSA_THEME = "ksa-theme";
+const THEME_STORAGE_KEY = "ksa-theme";
+type Theme = "dark" | "light";
 
 // Build data
-const builds = [
+interface Build {
+    increment:   number;
+    version:     number;
+    date:        string;
+    winFile:     string | null;
+    winHash:     string | null;
+    linuxFile:   string | null;
+    linuxHash:   string | null;
+    comment:     string | null;
+}
+
+// Tuple type matching the raw data layout for compact authoring
+type BuildTuple = [
+    increment:  number,
+    version:    number,
+    date:       string,
+    winFile:    string | null,
+    winHash:    string | null,
+    linuxFile:  string | null,
+    linuxHash:  string | null,
+    comment:    string | null,
+];
+
+function buildFromTuple([increment, version, date, winFile, winHash, linuxFile, linuxHash, comment]: BuildTuple): Build {
+    return { increment, version, date, winFile, winHash, linuxFile, linuxHash, comment };
+}
+
+const buildTuples: BuildTuple[] = [
     [1,   2076, "2025-08-15", "setup_ksa_v2025.8.43.2076.exe",                null, null,                               null, "first build(?)"],
     [2,   2088, "2025-08-18", "setup_ksa_v2025.8.17.2088.exe",                null, null,                               null, null],
     [3,   2091, "2025-08-18", "setup_ksa_v2025.8.33.2091.exe",                null, null,                               null, null],
@@ -54,7 +84,7 @@ const builds = [
     [49,  2634, "2025-11-03", "setup_ksa_v2025.11.3.2634.exe",                null, null,                               null, null],
     [50,  2742, "2025-11-12", "setup_ksa_v2025.11.4.2742.exe",                null, null,                               null, null],
     [51,  2781, "2025-11-13", "setup_ksa_v2025.11.2.2781.exe",                null, null,                               null, null],
-    [52,  2789, "2025-11-14", null,                                           null, null,                               null, null],
+    [52,  2789, "2025-11-14", null,                                            null, null,                               null, null],
     [53,  2791, "2025-11-14", "setup_ksa_v2025.11.4.2791.exe",                null, null,                               null, "first really public build"],
     [54,  2819, "2025-11-17", "setup_ksa_v2025.11.5.2819.exe",                null, null,                               null, null],
     [55,  2829, "2025-11-19", "setup_ksa_v2025.11.6.2829.exe",                null, null,                               null, null],
@@ -84,7 +114,7 @@ const builds = [
     [79,  3123, "2025-12-23", "setup_ksa_v2025.12.33.3123.exe",               null, null,                               null, null],
     [80,  3181, "2026-01-08", "setup_ksa_v2026.1.2.3181.exe",                 null, null,                               null, null],
     [81,  3194, "2026-01-09", "setup_ksa_v2026.1.3.3194.exe",                 null, null,                               null, null],
-    [82,  3232, "2026-01-16", null,                                           null, null,                               null, null],
+    [82,  3232, "2026-01-16", null,                                            null, null,                               null, null],
     [83,  3233, "2026-01-16", "setup_ksa_v2026.1.4.3233.exe",                 null, null,                               null, null],
     [84,  3249, "2026-01-19", "setup_ksa_v2026.1.5.3249.exe",                 null, null,                               null, null],
     [85,  3270, "2026-01-21", "setup_ksa_v2026.1.7.3270.exe",                 null, null,                               null, null],
@@ -110,7 +140,7 @@ const builds = [
     [105, 3592, "2026-02-18", "setup_ksa_v2026.2.11.3592.exe",                null, null,                               null, null],
     [106, 3622, "2026-02-19", "setup_ksa_v2026.2.18.3622.exe",                null, "setup_ksa_v2026.2.18.3622.tar",    null, "first linux build"],
     [107, 3638, "2026-02-20", "setup_ksa_v2026.2.30.3638.exe",                null, "setup_ksa_v2026.2.30.3638.tar.gz", null, null],
-    [108, 3640, "2026-02-20", null,                                           null, "setup_ksa_v2026.2.31.3640.tar.gz", null, "no windows build due to linux needing an immediate rebuild"],
+    [108, 3640, "2026-02-20", null,                                            null, "setup_ksa_v2026.2.31.3640.tar.gz", null, "no windows build due to linux needing an immediate rebuild"],
     [109, 3646, "2026-02-21", "setup_ksa_v2026.2.32.3646.exe",                null, "setup_ksa_v2026.2.32.3646.tar.gz", null, null],
     [110, 3656, "2026-02-23", "setup_ksa_v2026.2.34.3656.exe",                null, "setup_ksa_v2026.2.34.3656.tar.gz", null, null],
     [111, 3667, "2026-02-24", "setup_ksa_v2026.2.35.3667.exe",                null, "setup_ksa_v2026.2.35.3667.tar.gz", null, null],
@@ -143,109 +173,107 @@ const builds = [
     [138, 4397, "2026-05-15", "setup_ksa_v2026.5.7.4397.exe",                 null, "setup_ksa_v2026.5.7.4397.tar.gz",  null, null],
 ];
 
-// Theme handling
-const themeToggleBtn= document.getElementById("themeToggle");
-const themeEmoji= document.getElementById("toggleEmoji");
-const themeLabel= document.getElementById("toggleLabel");
+const builds: Build[] = buildTuples.map(buildFromTuple);
 
-function getStoredTheme()
-{
-    try
-    {
-        return localStorage.getItem(KSA_THEME);
-    }
-    catch
-    {
+// =============================================================================
+// Utilities
+// =============================================================================
+
+function getElement<T extends HTMLElement>(id: string): T {
+    const el = document.getElementById(id);
+    if (!el) throw new Error(`Element #${id} not found`);
+    return el as T;
+}
+
+// =============================================================================
+// Theme
+// =============================================================================
+
+function isTheme(value: string | null): value is Theme {
+    return value === "dark" || value === "light";
+}
+
+function getStoredTheme(): Theme | null {
+    try {
+        const value = localStorage.getItem(THEME_STORAGE_KEY);
+        return isTheme(value) ? value : null;
+    } catch {
         return null;
     }
 }
 
-function storeTheme(theme)
-{
-    try
-    {
-        localStorage.setItem(KSA_THEME, theme);
-    }
-    catch
-    {
+function storeTheme(theme: Theme): void {
+    try {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
         /* storage unavailable, silently ignore */
     }
 }
 
-function applyTheme(theme)
-{
+function applyTheme(theme: Theme): void {
     document.documentElement.setAttribute("data-theme", theme);
 
     const isDark = theme === "dark";
-    themeEmoji.textContent = isDark ? "🌙" : "☀️";
-    themeLabel.textContent = isDark ? "Dark mode" : "Light mode";
+    getElement("toggleEmoji").textContent = isDark ? "🌙" : "☀️";
+    getElement("toggleLabel").textContent = isDark ? "Dark mode" : "Light mode";
 
     storeTheme(theme);
 }
 
-function toggleTheme()
-{
+function toggleTheme(): void {
     const current = document.documentElement.getAttribute("data-theme");
     applyTheme(current === "dark" ? "light" : "dark");
 }
 
-themeToggleBtn.addEventListener("click", toggleTheme);
+getElement("themeToggle").addEventListener("click", toggleTheme);
 
 const savedTheme = getStoredTheme();
-if (savedTheme)
-{
-    applyTheme(savedTheme);
-}
+if (savedTheme) applyTheme(savedTheme);
 
+// =============================================================================
 // Build table
-document.getElementById("buildCount").textContent = `${builds.length} builds tracked`;
+// =============================================================================
 
-function buildDownloadCell(filename, versionNumber, cssClass = "")
-{
-    if (!filename)
-    {
-        return `<span class="no-version">missing</span>`;
-    }
-    const href = `${R2_BASE_URL}/${versionNumber}/${filename}`;
-    return `<a class="dl-link ${cssClass}" href="${href}">↓ ${cssClass === "linux" ? "Linux" : "Windows"}</a>`;
+getElement("buildCount").textContent = `${builds.length} builds tracked`;
+
+function buildDownloadCell(filename: string | null, increment: number, label: string, cssClass: string = ""): string {
+    if (!filename) return `<span class="no-version">missing</span>`;
+    const href = `${R2_BASE_URL}/${increment}/${filename}`;
+    const cls = cssClass ? ` ${cssClass}` : "";
+    return `<a class="dl-link${cls}" href="${href}">↓ ${label}</a>`;
 }
 
-function buildHashCell(hash)
-{
-    if (!hash)
-    {
-        return "-";
-    }
-    return hash;
+function buildHashCell(hash: string | null): string {
+    if (!hash) return "-";
+    // Truncate for display; full value in title for copy/hover
+    const display = hash.length > 16 ? `${hash.slice(0, 16)}…` : hash;
+    return `<span class="hash-value" title="${hash}">${display}</span>`;
 }
 
-function renderBuildRow([increment, version, date, winFile, winHash, linuxFile, linuxHash, comment])
-{
+function renderBuildRow(build: Build): HTMLTableRowElement {
+    const { increment, version, date, winFile, winHash, linuxFile, linuxHash, comment } = build;
+
     const tr = document.createElement("tr");
-    const isMissingBoth = !winFile && !linuxFile;
-    if (isMissingBoth)
-    {
-        tr.classList.add("missing");
-    }
+
+    if (!winFile && !linuxFile) tr.classList.add("missing");
 
     tr.innerHTML = `
-        <td class="ver-num">${increment}</td>
-        <td class="build-num">${version}</td>
+        <td class="ver-num">${version}</td>
+        <td class="build-num">${increment}</td>
         <td class="build-date">${date}</td>
         <td>${comment ? `<span class="comment-tag">${comment}</span>` : ""}</td>
-        <td>${buildDownloadCell(winFile, version)}</td>
+        <td>${buildDownloadCell(winFile, increment, "Windows")}</td>
         <td class="hash-cell">${buildHashCell(winHash)}</td>
-        <td>${buildDownloadCell(linuxFile, version, "linux")}</td>
+        <td>${buildDownloadCell(linuxFile, increment, "Linux", "linux")}</td>
         <td class="hash-cell">${buildHashCell(linuxHash)}</td>
     `;
 
     return tr;
 }
 
-const tbody = document.getElementById("tbody");
+const tbody = getElement<HTMLTableSectionElement>("tbody");
 const fragment = document.createDocumentFragment();
 
-// Reverse a copy so the source array stays in chronological order
 [...builds].reverse().forEach(build => fragment.appendChild(renderBuildRow(build)));
 
 tbody.appendChild(fragment);
