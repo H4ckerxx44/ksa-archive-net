@@ -1,5 +1,5 @@
 import './styles.css';
-import packageVersion from './version.json';
+import { version } from '../package.json';
 
 // Config
 const R2_BASE_URL = "https://files.ksa-archive.net/builds";
@@ -178,7 +178,7 @@ const buildTuples: BuildTuple[] = [
 
 const builds: Build[] = buildTuples.map(buildFromTuple);
 
-getElement("siteVersion").textContent = `v${packageVersion.version}`;
+getElement("siteVersion").textContent = `v${version}`;
 
 // Utilities
 function getElement<T extends HTMLElement>(id: string): T

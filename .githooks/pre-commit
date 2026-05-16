@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VERSION_FILE="src/version.json"
+VERSION_FILE="package.json"
 
 if [[ ! -f "$VERSION_FILE" ]]; then
     echo "[pre-commit] $VERSION_FILE not found"
