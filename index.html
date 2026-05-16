@@ -2,12 +2,22 @@
 <html data-theme="dark" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitten Space Agency - Archive</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
-          rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+
+    <!-- DNS + TLS handshake for Google Fonts done early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="description" content="Version archive for Kitten Space Agency - every build preserved for the future.">
+    <meta property="og:title" content="Kitten Space Agency Archive">
+    <meta property="og:description" content="Every KSA build, preserved for history.">
+    <meta name="theme-color" content="#0d0f14">
 </head>
 <body>
 <div class="wrapper">
@@ -29,7 +39,12 @@
         </div>
 
         <div class="meta-row">
-            <a class="badge badge--highlighted" href="https://github.com/H4ckerxx44/ksa-archive-net" target="_blank">
+            <!-- rel="noopener noreferrer": prevents the new tab from accessing
+                 window.opener, and stops the Referer header being sent. -->
+            <a class="badge badge--highlighted"
+               href="https://github.com/H4ckerxx44/ksa-archive-net"
+               target="_blank"
+               rel="noopener noreferrer">
                 <svg aria-hidden="true" fill="currentColor" height="13" viewBox="0 0 24 24" width="13">
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58
             0-.28-.01-1.02-.01-2C6 21.38 5.28 19.3 5.28 19.3c-.55-1.4-1.34-1.77-1.34-1.77
@@ -64,22 +79,26 @@
             <p>We got permissions as long as we don't use this archive to decompile or alter those setups.
                 This is <i>purely</i> to archive all possible versions of KSA for the future.</p>
             <div class="permission-note">
-                <a href="images/rocket_permission.png">Verified by Rocket (CEO)</a>
+                <!-- Descriptive aria-label so screen readers understand the destination -->
+                <a href="images/rocket_permission.png"
+                   aria-label="View permission screenshot verified by Rocket, CEO">
+                    Verified by Rocket (CEO)
+                </a>
             </div>
         </div>
     </div>
 
     <div class="table-header">
         <h2>Build History</h2>
-        <span class="count">Builds 2076 => 4397</span>
+        <span class="count">Builds 2076 =&gt; 4397</span>
     </div>
 
     <div class="table-wrap">
         <table>
             <thead>
             <tr>
-                <th>Build</th>
                 <th>Number</th>
+                <th>Build</th>
                 <th>Date</th>
                 <th>Notes</th>
                 <th>Windows Version</th>
@@ -88,7 +107,16 @@
                 <th>Linux Hash</th>
             </tr>
             </thead>
-            <tbody id="tbody"></tbody>
+            <tbody id="tbody">
+            <!-- Shown only when JS is disabled -->
+            <noscript>
+                <tr>
+                    <td colspan="8" style="text-align:center; padding: 24px; font-style: italic;">
+                        JavaScript is required to display the build table.
+                    </td>
+                </tr>
+            </noscript>
+            </tbody>
         </table>
     </div>
 
@@ -98,6 +126,6 @@
     </footer>
 </div>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>

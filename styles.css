@@ -14,7 +14,12 @@
     --missing-bg: #2a2030;
     --missing-hover: #2f2238;
     --missing-text: #6a5070;
-    --star-opacity: 1;
+
+    /* Link states use variables so they work in both themes */
+    --dl-link-visited: #ff0000;
+    --dl-link-active:  #ffff00;
+    --dl-link-linux-visited: #ff0000;
+    --dl-link-linux-active:  #ffff00;
 }
 
 /* Light theme */
@@ -32,7 +37,11 @@
     --missing-bg: #f0eaf5;
     --missing-hover: #e8dff0;
     --missing-text: #a080b0;
-    --star-opacity: 0;
+
+    --dl-link-visited: #ff0000;
+    --dl-link-active: #ff00ff;
+    --dl-link-linux-visited: #ff0000;
+    --dl-link-linux-active: #ff00ff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -322,13 +331,9 @@ td {
     transition: background 0.15s, border-color 0.15s;
 }
 
-.dl-link:active, .dl-link.linux:active {
-    color: yellow;
-}
-
-.dl-link:visited, .dl-link.linux:visited {
-    color: red;
-}
+/* Use CSS variables for link states — works correctly in both themes */
+.dl-link:visited  { color: var(--dl-link-visited); }
+.dl-link:active   { color: var(--dl-link-active); }
 
 .dl-link:hover {
     background: rgba(91, 140, 255, 0.2);
@@ -340,6 +345,9 @@ td {
     border: 1px solid rgba(76, 175, 120, 0.3);
     color: var(--green);
 }
+
+.dl-link.linux:visited { color: var(--dl-link-linux-visited); }
+.dl-link.linux:active  { color: var(--dl-link-linux-active); }
 
 .dl-link.linux:hover {
     background: rgba(76, 175, 120, 0.2);
@@ -402,4 +410,19 @@ footer {
 
 [data-theme="light"] .badge--highlighted:hover {
     box-shadow: 0 0 12px rgba(196, 127, 0, 0.3);
+}
+
+/*
+    prefers-reduced-motion: users who have this OS setting enabled get no
+    animations or transitions. This covers the pulse badge, theme toggle
+    thumb, and all hover transitions.
+*/
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
