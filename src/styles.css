@@ -426,3 +426,10 @@ footer {
         transition-duration: 0.01ms !important;
     }
 }
+
+.site-version {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}

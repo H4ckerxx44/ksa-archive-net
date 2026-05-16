@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+VERSION_FILE="src/version.json"
+
+if [[ ! -f "$VERSION_FILE" ]]; then
+    echo "[pre-commit] $VERSION_FILE not found, skipping version bump"
+    exit 0
+fi
+
+# Read current version
+current=$(node -p "require('./$VERSION_FILE').version")
+
+# Split into parts
+IFS='.' read -r major minor patch <<< "$current"
+
+# Increment patch
+patch=$(( patch + 1 ))
+new_version="${major}.${minor}.${patch}"
+
+# Write back
+node -e "
+const fs = require('fs');
+const pkg = JSON.parse(fs.readFileSync('$VERSION_FILE', 'utf8'));
+pkg.version = '$new_version';
+fs.writeFileSync('$VERSION_FILE', JSON.stringify(pkg, null, 2) + '\n');
+"
+
+# Stage the updated file so it's included in this commit
+git add "$VERSION_FILE"
+
+echo "[pre-commit] version bumped: $current → $new_version"

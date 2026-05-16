@@ -1,4 +1,5 @@
 import './styles.css';
+import packageVersion from './version.json';
 
 // Config
 const R2_BASE_URL = "https://files.ksa-archive.net/builds";
@@ -177,10 +178,9 @@ const buildTuples: BuildTuple[] = [
 
 const builds: Build[] = buildTuples.map(buildFromTuple);
 
-// =============================================================================
-// Utilities
-// =============================================================================
+getElement("siteVersion").textContent = `v${packageVersion.version}`;
 
+// Utilities
 function getElement<T extends HTMLElement>(id: string): T
 {
     const el = document.getElementById(id);
@@ -191,10 +191,7 @@ function getElement<T extends HTMLElement>(id: string): T
     return el as T;
 }
 
-// =============================================================================
 // Theme
-// =============================================================================
-
 function isTheme(value: string | null): value is Theme
 {
     return value === "dark" || value === "light";
@@ -250,10 +247,7 @@ if (savedTheme)
     applyTheme(savedTheme);
 }
 
-// =============================================================================
 // Build table
-// =============================================================================
-
 getElement("buildCount").textContent = `${builds.length} builds tracked`;
 
 function buildDownloadCell(filename: string | null, increment: number, label: string, cssClass: string = ""): string
