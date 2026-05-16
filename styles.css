@@ -1,4 +1,4 @@
-/* ── Dark theme (default) ── */
+/* Dark theme (default) */
 :root,
 [data-theme="dark"] {
     --bg: #0d0f14;
@@ -17,7 +17,7 @@
     --star-opacity: 1;
 }
 
-/* ── Light theme ── */
+/* Light theme */
 [data-theme="light"] {
     --bg: #f4f5f8;
     --surface: #ffffff;
@@ -55,7 +55,7 @@ body {
     padding: 60px 24px 80px;
 }
 
-/* ── Header ── */
+/* Header */
 header {
     margin-bottom: 56px;
     border-bottom: 1px solid var(--border);
@@ -88,7 +88,7 @@ h1 .agency { color: var(--accent); }
     margin-top: 6px;
 }
 
-/* ── Theme toggle button ── */
+/* Theme toggle button */
 .theme-toggle {
     flex-shrink: 0;
     display: flex;
@@ -139,7 +139,7 @@ h1 .agency { color: var(--accent); }
 
 .toggle-label { white-space: nowrap; user-select: none; }
 
-/* ── Badges ── */
+/* Badges */
 .meta-row {
     display: flex;
     flex-wrap: wrap;
@@ -174,7 +174,7 @@ h1 .agency { color: var(--accent); }
     50% { opacity: 0.4; }
 }
 
-/* ── Info cards ── */
+/* Info cards */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -218,7 +218,7 @@ h1 .agency { color: var(--accent); }
     margin-top: 8px;
 }
 
-/* ── Table ── */
+/* Table */
 .table-header {
     display: flex;
     align-items: baseline;
@@ -367,7 +367,7 @@ td {
     white-space: nowrap;
 }
 
-/* ── Footer ── */
+/* Footer */
 footer {
     margin-top: 48px;
     padding-top: 24px;

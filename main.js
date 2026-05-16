@@ -1,4 +1,4 @@
-// ── Theme toggle ──
+// - Theme toggle -
 const html = document.documentElement;
 const btn = document.getElementById("themeToggle");
 const emoji = document.getElementById("toggleEmoji");
