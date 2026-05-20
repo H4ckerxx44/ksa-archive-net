@@ -178,7 +178,7 @@ const buildTuples: BuildTuple[] = [
 ];
 
 const builds: Build[] = buildTuples.map(buildFromTuple);
-
+getElement("buildRange").textContent = `Builds ${builds[0].version} => ${builds[builds.length - 1].version}`;
 getElement("siteVersion").textContent = `v${version}`;
 
 // Utilities
