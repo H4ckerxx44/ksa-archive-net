@@ -284,8 +284,8 @@ function renderBuildRow(build: Build): HTMLTableRowElement
     }
 
     tr.innerHTML = `
-        <td class="ver-num">${version}</td>
-        <td class="build-num">${increment}</td>
+       <td class="ver-num">${increment}</td>
+       <td class="build-num">${version}</td>
         <td class="build-date">${date}</td>
         <td>${comment ? `<span class="comment-tag">${comment}</span>` : ""}</td>
         <td>${buildDownloadCell(winFile, version, "Windows")}</td>
