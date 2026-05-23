@@ -1,10 +1,16 @@
-<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <script id="youtube-hd-{4cf120ba-c67a-47a9-9c99-7ab813d08379}">var ythdlog = () => {};;var ythderror = () => {};</script>
-    <!--
-     created with Free Online Sitemap Generator www.xml-sitemaps.com
-    -->
-    <url>
-        <loc>https://ksa-archive.net/</loc>
-        <lastmod>2026-05-23T17:49:50+00:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ksa-archive.net/</loc>
+  <lastmod>2026-05-23T17:49:50+00:00</lastmod>
+</url>
+
+
 </urlset>
