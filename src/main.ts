@@ -182,6 +182,7 @@ const buildTuples: BuildTuple[] = [
     [4601, "2026-06-11", "setup_ksa_v2026.6.6.4601.exe", null, "setup_ksa_v2026.6.6.4601.tar.gz", null, null],
     [4631, "2026-06-16", "setup_ksa_v2026.6.7.4631.exe", null, "setup_ksa_v2026.6.7.4631.tar.gz", null, null],
     [4680, "2026-06-19", "setup_ksa_v2026.6.8.4680.exe", null, "setup_ksa_v2026.6.8.4680.tar.gz", null, null],
+    [4750, "2026-06-27", "setup_ksa_v2026.6.9.4750.exe", null, "setup_ksa_v2026.6.9.4750.tar.gz", null, null],
 ];
 
 const builds: Build[] = buildTuples.map(buildFromTuple);
