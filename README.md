@@ -27,7 +27,7 @@ or
 We got permissions as long as we don't use this archive to decompile or alter those setups.
 This is purely to archive all possible versions of KSA for the future.
 
-![View permission screenshot](images/rocket_permission.png)
+![View permission screenshot](public/images/rocket_permission.png)
 
 ## Verifiability
 
