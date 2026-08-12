@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Schema for KSA builds",
+  "type": "array",
+  "contains": {
+    "$ref": "#/definitions/build-entry"
+  },
+  "definitions": {
+    "build-entry": {
+      "type": "object",
+      "required": [
+        "version",
+        "date"
+      ],
+      "properties": {
+        "version": {
+          "description": "The numerical version number for a KSA build",
+          "type": "number",
+          "minimum": 0
+        },
+        "date": {
+          "description": "The date of a KSA build, given as YYYY-MM-DD",
+          "type": "string",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}"
+        },
+        "winFile": {
+          "description": "The file-name of the windows executable (exe or installer) stored in R2",
+          "type": "string"
+        },
+        "winHash": {
+          "description": "The digest of the windows executable",
+          "type": "string"
+        },
+        "linuxFile": {
+          "description": "The file-name of the linux executable (zip file) stored in R2",
+          "type": "string"
+        },
+        "linuxHash": {
+          "description": "The digest of the linux executable",
+          "type": "string"
+        },
+        "comment": {
+          "description": "An additional comment for this build",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
