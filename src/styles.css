@@ -227,6 +227,8 @@ h1 .agency { color: var(--accent); }
     margin-top: 8px;
 }
 
+.permission-note > a { color: var(--green); }
+
 /* Table */
 .table-header {
     display: flex;
