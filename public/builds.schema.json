@@ -1,12 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Schema for KSA builds",
+  "description": "Schema for KSA builds list",
   "type": "array",
   "contains": {
     "$ref": "#/definitions/build-entry"
   },
   "definitions": {
     "build-entry": {
+      "description": "A entry for a KSA build",
       "type": "object",
       "required": [
         "version",
