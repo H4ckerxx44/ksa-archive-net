@@ -1,6 +1,6 @@
 import './styles.css';
 import { version } from '../package.json';
-import buildRecords from './builds.json';
+import buildRecords from '../public/builds.json';
 
 // Config
 const R2_BASE_URL = "https://files.ksa-archive.net/builds";
@@ -8,17 +8,7 @@ const THEME_STORAGE_KEY = "ksa-theme";
 type Theme = "dark" | "light";
 
 // Build data
-interface Build
-{
-    increment: number;
-    version: number;
-    date: string;
-    winFile: string | null;
-    winHash: string | null;
-    linuxFile: string | null;
-    linuxHash: string | null;
-    comment: string | null;
-}
+type Build = { increment: number } & BuildRecord;
 
 type BuildRecord = {
     version: number;
@@ -30,12 +20,12 @@ type BuildRecord = {
     comment: string | null;
 };
 
-function buildFromRecord(record: BuildRecord, index: number): Build
+function buildFromRecord(record: BuildRecord, index: number): Build 
 {
     return {increment: index + 1, ...record};
 }
 
-const builds: Build[] = (buildRecords as BuildRecord[]).map(buildFromRecord);
+const builds: Build[] = (buildRecords as Build[]).map(buildFromRecord);
 getElement("buildRange").textContent = `Builds ${builds[0].version} => ${builds[builds.length - 1].version}`;
 getElement("siteVersion").textContent = `v${version}`;
 
