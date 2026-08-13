@@ -20,7 +20,7 @@ type BuildRecord = {
     comment: string | null;
 };
 
-function buildFromRecord(record: BuildRecord, index: number): Build 
+function buildFromRecord(record: BuildRecord, index: number): Build
 {
     return {increment: index + 1, ...record};
 }
