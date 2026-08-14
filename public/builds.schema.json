@@ -45,7 +45,8 @@
           "type": "string"
         },
         "hasChangelog": {
-          "description": "If this version has an archived changelog entry"
+          "description": "If this version has an archived changelog entry",
+          "type": "boolean"
         }
       }
     }
