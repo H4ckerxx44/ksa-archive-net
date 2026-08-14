@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3299,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1464939339099275317",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1464317851145077052",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1464406486871572561",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1464406487869685780",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1464763403565404234",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1464763404500734128"
+  ],
+  "changes": [
+    "Fixed vulkan validation errors from ground clutter device meshes not being disposed.",
+    "Fixed vulkan validation error from ground clutter LOD fade buffer not being disposed.",
+    "Added new XML attribute to MeshFileReference: \"HostOnly\", defaults false, which creates a mesh on the CPU only.",
+    "Forced HostOnly to true for ground clutter mesh loading since the individual LODs are not needed on-device - only the atlas.",
+    "Converted Gimbals to PartComponents.",
+    "Converted stackalloc thruster pulse times to SpanOwner.",
+    "Made exponential moving average into a library function.",
+    "Added an all-states iterator for a user-specified selection of components."
+  ]
+}

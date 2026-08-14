@@ -1,0 +1,41 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2829,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1440524282110283847",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1439971393813876810",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440104691252990153",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440161614828404737",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440164680281755668",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440223625746710650",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440481039129641011",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440486356492226581",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440496517243994214",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440509831575502968"
+  ],
+  "changes": [
+    "Fix changing MSAA setting causing issues with kitten rendering",
+    "Fix occlusion by planet radius shadowing vessels below the mean radius",
+    "Fix vessel lighting using atmospheric transmittance when atmosphere is disabled",
+    "Add time switch shader function to alternate between different pieces of shader code for testing / debugging. The function is currently unused but will be used later as the code has been used a lot in the past for a temporary test.",
+    "Shader hot reloader fixes and improvements.",
+    "Tidier wording on logged messages on shader hot reload",
+    "Fixed runtime shader files not hot reloading",
+    "Make Filepath.IsRuntimePath() use AppDomain.CurrentDomain.BaseDirectory instead of a \"/bin/\" string.",
+    "Add more shader files to be hot reloaded by recompiling them on frame rebuild",
+    "Disable shader hot reloader in production due to file permissions needed in the build to save shader files. Enabling file permissions here is too risky for users.",
+    "Change Filepath.CorrectSeparators to not use \"this\" input argument. This makes the function more flexible if people want to compare the uncorrected path with the corrected path, instead of modifying the string when calling the function.",
+    "Fixed to ensure you cannot create a Burn on a stale flightplan. eg: A Burn's flightplan that is old (in the past).",
+    "Added screen notifications when you try to create a Burn on a stale flightplan to inform you why it has not created a burn in this case.",
+    "Fixed potential invalid burn/patch processing when updating the Burn Plan for a vehicle by ensuring the Vehicle's Flight Plan is also updated first before updating the Burn Plan.",
+    "Smoothed out animation inputs so Hunter's MMU animation is less jittery",
+    "Changed RadixSorter to use stackalloc rather than creating an array to reduce heap allocation. This will limit the size of the inSource.",
+    "Added/updated fuel tank parts. They should all now have Attach Nodes.",
+    "Updated the circle mesh in the combined transform gizmos so it faces 'forward' correctly. Changed required code to factor in the difference in rotation.",
+    "Fixed incorrect collisions for procedural crater modifiers.",
+    "Unified cell based hash functions to HashFunctions.glsl and HashFunctions.cs.",
+    "Replaced precision-sensitive hash functions with a PCG integer hash.",
+    "Fixed mismatching epsilon values in CPU and GPU voronoi functions.",
+    "Removed unused hashing functions from ModifiersCommon.glsl."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2994,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1445745779678380142",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445726405307666443",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445743287012036690"
+  ],
+  "changes": [
+    "Fix NaNs in the atmosphere shader when the direction to the planet is aligned with the direction to the sun",
+    "Reverted addition of BRUTAL monitoring tool, with prejudice, as it prevents running completely in compiled build."
+  ]
+}

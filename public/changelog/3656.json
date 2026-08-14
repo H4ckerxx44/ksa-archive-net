@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3656,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1475395468019105886",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1475396055695626310",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1475396502548381745",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1474849600916557875",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475237274575831273",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475239782031425546",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475260767384375379",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475275876970266784",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475283017072382178",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475283018829529098",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475316071694340177",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1475393911655501908"
+  ],
+  "changes": [
+    "Added ground clutter terrain colour matching. Rocks will now correctly match the terrain colour beneath them.",
+    "Changed ground clutter diffuse textures to greyscale variation masks which multiply with the terrain colour.",
+    "Added planet renderer texture set to the ground clutter pipeline.",
+    "Added function \"GetPlanetSurfaceColor\" to Generate.comp which replicates the planet colour sampling in Planet.frag, diffuse only.",
+    "Compressed LOD info passed via the instance matrix from Evaluate.comp into bitflags, freeing up space for two more entries. One has been used for the terrain colour, encoded as a uint.",
+    "Changed StageFlags in PlanetRenderer.cs material pipeline to support ComputeShader, so Generate.comp can sample the ground colour.",
+    "Removed unused Mars ground clutter textures.",
+    "Fix for Linux+AMD crash related to planet buffer mapping",
+    "Same fix as the last commit - I missed one",
+    "Reduced 'floatiness' of IVA camera.",
+    "Fixed Engine Sounds would not stop when destroying a vehicle",
+    "Added several new density conversions.",
+    "Added a method to compute the speed of sound in a gas.",
+    "Packed mesh vertex and index data into two shared buffers for meshes marked to be interleaved.",
+    "Fixed trying to load a modded system that did not have locations or at least one predefined vehicle would cause a crash on config screen. Will still require user to load in simulation mode to work.",
+    "Added game will scan for mods during load. If mods that have not been configured are discovered, it will ask user whether to enable or disable before proceeding with load.",
+    "Added a local 'mods' folder will also be scanned for mods. This allows users to put mods in wherever the local documents are stored by the OS, helping with version updates of the game. This will be expanded significantly and allow custom mod loader support."
+  ]
+}

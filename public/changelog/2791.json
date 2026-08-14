@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2791,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1438748184817041430",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438742520396775447"
+  ],
+  "changes": [
+    "Fix issue where Mars teleport button was teleporting to a pole. This caused the mesh to be underneath a crater. 45 45 for lat long is now used."
+  ]
+}

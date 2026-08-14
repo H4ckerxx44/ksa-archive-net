@@ -1,0 +1,38 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3000,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1446015751520649310",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445899528824950887",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445899530003550250",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445900787657085070",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445991925671923764",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1445999523448225892",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446011984372826175"
+  ],
+  "changes": [
+    "Removed Vulkan API version setting option as 1.2 vs 1.3 hasn't seem to come up with resolving compatibility issues and only supporting 1.3 gives us a consistent feature set to build on. If your GPU driver does not support 1.3 you should try updating your drivers. If that fails, your GPU manufacturer is almost 4 years late on updating their driver implementation.",
+    "Updated kitten to new version. This updated kitten has more bones allowing for additional animation options such as resizing the kittens pupils. This new version also seperates eye and head materials, allowing for easy swapping between the kittens eye colors as previously the head and eye textures were shared.",
+    "Implemented a character avatar system. This is a backend definition of the kitten which consolidates all aspects of what a kitten is, aswell as allowing a cohesive system for generating random kittens in the future. (Although random kittens are not yet supported the character avatar is an important step towards this).",
+    "Removed LoadedCharacterRenderRef, this is now a redundant system which was previously abstracting how meshes were loaded. Its functionality has been merged into the character avatar system.",
+    "Character modding overhaul. Previously every kitten had to be fully redefined, however in XML a character is now broken up into different descriptions (CharacterCore, CharacterTextures, MMUAnimations, CharacterFur etc). This allows for easier modding aswell as additional character parameters getting exposed, such as fur length.",
+    "Character animations have been completely re-exported, stripping out any redundant data that might be stored in the glbs. This has reduced the total file sizes of the animations by ~18Mbs. All animations also needed to be exported for the new version of the kitten.",
+    "Added new kitten facial expressions, with support for multiple variations of expressions to be loaded. This can be showcased with the kittens new 'personality' attribute.",
+    "Adjusted the kittens look at behaviour to introduce a very basic eye saccades system. This helps to remove the death stare that was previously present.",
+    "Removed gltf texture dependency for kitten textures. Previously the kittens textures were tied directly into the gltf, however they are now properly seperated allowing for easier modding and texture swapping.",
+    "Removed alpha discard check from ModelPbr.frag.",
+    "Converted kitten textures from png to ktx2.",
+    "The character renderer now uses a repeat sampler instead of a clamped sampler to fix some artifacts present on mirrored parts of the kitten.",
+    "Fixed a bug that prevented the fur material from reading directly from the head material. This means the characters fur no longer needs to index directly into the gltf to get the characters normal map.",
+    "Created proper textures for the glass visor. Previously the roughness and metallic values were hardcoded inside ModelGlass.frag. The visors ORM has now been edited to have the desired values.",
+    "Removed kitten pngs. Due to a small bug present the gltf texture references have been replaced with 2x2 placeholder images. This is only temporary.",
+    "Character attachments now properly support custom textures. This means that one shared mesh can be used with different textures, similar to how the kitten is implemented currently.",
+    "Fixed text on MMU not rendering correctly.",
+    "Changes to move total propellant capacity by mass from a made up number at a vehicle level to a real value based on the volume of all the sub parts in a vehicle.",
+    "Remove PropellantMassCapacity from VehicleSaves. This is replaced with SubstanceStorageVolume at the subpart level.",
+    "Changed it so you must use a Method to change the SubPart list in a Part instance. This is so we can cache values for the part.",
+    "Added CombustionProcess.GetLiquidMassByVolume so we can easily get the mass of a liquid for a Combustion Process by volume.",
+    "Added SubstanceStorageVolume to SubPartTemplate and SubPart classes. Pre-populated values into existing sub part tank definitions. These probably need a second pass on their values.",
+    "Added PartTree.SubstanceStorageVolume to store the total storage by volume of all the parts in the Tree."
+  ]
+}

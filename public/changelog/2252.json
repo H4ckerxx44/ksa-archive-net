@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2252,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1410883474034004044",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1410875244276879394"
+  ],
+  "changes": [
+    "Fixed handling of different events (Impact, multiple Encounters, Escape) in patched conics to correctly identify which event comes first and process accordingly."
+  ]
+}

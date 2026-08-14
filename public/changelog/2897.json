@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2897,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1442408014001995807",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1442383155636998285"
+  ],
+  "changes": [
+    "Added two new kittens to the game, they have unique fur textures and eye colors. We do support each cat having their own fur masks, different suit textures etc, however for now the only difference between the cats are their fur textures and eyes.",
+    "Revert \"+ Modified fullscreen/borderless/windowed modes to work more as you would expect them to. Turned off ImGui popout windows when in fullscreen.\"",
+    "This reverts commit f2d640256f3e7e63ddb27ada8cc22a8ecfd8a123."
+  ]
+}

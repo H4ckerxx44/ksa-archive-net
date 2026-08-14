@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2547,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1431140560231469077",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430945729366589512",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430995733305229405",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1431065530743132211",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1431068911029194775",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1431112283072892938",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1431135851894800495"
+  ],
+  "changes": [
+    "Render an ambient atmosphere LUT to make sampling ambient in clouds and ocean cheaper",
+    "Change cloud shadows textures to sampledImages to save on samplers",
+    "Rescaled Phobos' terrain textures to appropriate real scales.",
+    "Increased the resolution of the asteroid scale mesh.",
+    "Reduced the tiling on Mars' Sand material.",
+    "Defaulted the distant sphere metallic and roughness values to those in planet.frag.",
+    "Rationalized some more data in Burn Flightplans. Removed unnecessary need for first patch to be copied into each burn's flightplan.",
+    "Fixed deleting of future burns when you delete an earlier burn. Now that we have decoupled all the data, you can happily delete burns in any order and all existing burns will simply stay on the Time that they were created and move to your current flightplan.",
+    "Updated some tweaked textures for the medium capsule part.",
+    "Fix mismatch between initialSpectrums image format and descriptor"
+  ]
+}

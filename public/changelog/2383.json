@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2383,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1417852729828573235",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417303820030971934",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417586436386979861",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417677057135087649",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417729896377221213",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417739882683432990",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1417755299846029332"
+  ],
+  "changes": [
+    "Changed git to use csharp diffs for csharp files. Diffs are a bit cleaner for those using CLI git.",
+    "Add cloud shadows to terrain and ocean, approximate the volumetric shadows by sampling a single slice of the volumetric layer",
+    "Fixed ability to add burn to parent body orbit line and then transfer it to the controlled vehicle flight plan. This was removed when the gizmo was updated a few months back.",
+    "Added missing override for GetStateVectorsAt( game time) to Vehicle class.",
+    "Fixed so we don't actually need an actual encounter with our target body to transfer a burn from the parent orbit to the vehicle's flight plan.",
+    "Show distance and time of flight on closest approach markers.",
+    "Fixed incorrect Ap Pe overlap check in find encounters and removed this overlap check from Find closest approaches, because we don't want it for encounters. They may not overlap for a closest encounter.",
+    "Fixed find closest approach to actually search the correct overlap points and merge into one search where it makes sense."
+  ]
+}

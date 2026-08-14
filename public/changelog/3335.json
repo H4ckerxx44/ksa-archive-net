@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3335,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1466611405787631849",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466464881237561570",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466551178598027581",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466552510734143667",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466585205501595832"
+  ],
+  "changes": [
+    "Add planetary rings. Sort and render parts of the rings correctly before/after atmospheres and clouds. Make rings affect sunflares. Sample celestial shadows on rings.",
+    "Add initial rings config for Saturn and a ring texture",
+    "Add initial config for Pan since it orbits inside the rings",
+    "Add missing barriers to the planet transparencies renderer",
+    "Add a volumetric effect to the rings rendering at limited distances when inside the ring. Ring meshes are still WIP and not yet merged",
+    "Use same lighting model for 2d and volumetric rings for seamless transitions between both and to simulate some effects like thicker areas of the ring appearing darker than thinner areas when looking at the non-lit side of the ring. In other words light filters through the ring realistically even on the 2d version",
+    "Take advantage of the simple ring geometry to find analytic solutions for the light path and scattering integrals. Use analytic light density when raymarching to improve volumetric rendering performance, use approximate scattering integral for the 2d ring to perfectly match the volumetric effect and seamlessly transition between them",
+    "Custom capped cylinder intersection functions to avoid precision issues from more optimized versions found online",
+    "Fix volumetricExhaustRenderer failing to hot reload shaders",
+    "Prototyped volumetric eclipse shadows on rings, some accuracy issue with the volumetric shadows remain to fix",
+    "Add upscaling to volumetric ring",
+    "Change depth resolve modes for transparencies from max to min to fix issues with volumetric rings with MSAA, this seems fine so far but ideally we'd use a custom checkerboard depth resolve",
+    "Add procedural \"detail\" lines to rings to avoid passing in very high-res ring textures",
+    "Add ring shadows on planet shaders (planet and distantPlanet), still have to sample them on the atmospheres",
+    "Simplify setup of distant sphere rendering using bindless",
+    "Fixed an error where vehicle mass properties were being computed when the part component states were zeroed out.",
+    "Reverted extra mass properties recalculation in the velocity verlet integrator.",
+    "Removed the preserved states dictionary concept and pass the old state list directly. This also removes the ClearInto() method which was causing users to do convoluted and error-prone things when attaching and/or detaching parts.",
+    "Renamed UpdateDerivedValues to ReinitializeDerivedValues to emphasize how expensive it can be.",
+    "Made several PartTree methods private, one of which was being called inappropriately.",
+    "Added first pass on generic part component save data. Currently only being used by tank resources but will be expanded.",
+    "Fixed broken universe save/load due to generic vehicle save data. You can now save and load the universe again."
+  ]
+}

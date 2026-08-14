@@ -1,0 +1,11 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2300,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1413132756283822101",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1413129655896248532"
+  ],
+  "changes": [
+    "Fixed nasty bug that would cause RCS spam. This was because of a serious issue with the pattern I implemented to avoid allocation. It was filling the span, which would leave garbage values inside. Insidiously, it worked fine for single movements - just not the flight computer control, by pure chance. Refactored to still use a fixed array, but make it nullable. This was a very silly, and dangerous mistake on my part. Credit: Anth for finding."
+  ]
+}

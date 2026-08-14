@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2091,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1406974306759475321",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1406977892814032987",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406300584251887728",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406673413111677009",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406770336535412827",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406785528421945378",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406809732399763507",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406819900609138708",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406822330746802329",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406833181864235028",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406834182071517246",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406866816575213683",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406960626089328640"
+  ],
+  "changes": [
+    "Added patches and orbit lines for vehicles that are not currently followed by that camera will be drawn an 'inactive' color, which by default is grey. This will help make it clear in map view what is followed, controlled, and reduce orbit line clutter.",
+    "Fix derivatives near poles for terrain mesh height mip selection",
+    "Remove cubemesh storage radius",
+    "Revert the more agressive snapping on the terrain meshCollection",
+    "Change default tonemapper and exposure to Hable"
+  ]
+}

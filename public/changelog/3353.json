@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3353,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1466773300742066295",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466687587103146024",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466689536804257794",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466695850913693736",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466703807118315597",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466745287367196825"
+  ],
+  "changes": [
+    "Update old vehicle properties correctly after decoupling occurs.",
+    "Avoid rebuilding the part tree in the vehicle editor.",
+    "Initialize part tree for parts that are newly created in the editor. This prevents crashes if they are right-clicked before being attached to the vehicle.",
+    "Fix issue where 2d rings would display over craft from angles when close to the ring",
+    "Fix polygonal aspect on ring shadows on planet surface at long distance, caused by low LOD distant mesh"
+  ]
+}

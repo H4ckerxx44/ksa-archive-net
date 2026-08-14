@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2088,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1406840586987638795",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1406842718856151170",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406300584251887728",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406673413111677009",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406770336535412827",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406785528421945378",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406809732399763507",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406819900609138708",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406822330746802329",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406833181864235028",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1406834182071517246"
+  ],
+  "changes": [
+    "Darkened the Moon texture to better match its albedo. Realistically the Moon is am even darker brown/grey colour but I've opted for something between what we had and what's realistic for now.",
+    "Fixed 132 byte push constant for planet rendering. Vulkan spec states minimum push constant size is 128 bytes and most AMD cards use this size. This might fix some AMD related issues.",
+    "Removed PlanetPosition (EGO) from planet push constant and instead fetch it from the global shader uniforms.",
+    "Adjusted celestial index calculation so the indices set on the planet renderer align with the ego positions passed to the global shader uniforms.",
+    "Changed planet ubo to a dynamic ubo so the current planet index can be safely updated per-frame.",
+    "Fixed thrusters getting stuck on when switching the map on and off.",
+    "Fixed shift-click to set target being processed on button press and create burn being processed on button release causing BOTH to be processed. Burn creation is now also on left button press.",
+    "Added UI display of currently set Target.",
+    "Added ability to set target of another vehicle.",
+    "Changed distance and speed UI info when hovering over celestial objects to be relative to the controlled vehicle when the player is controling a vehicle. Otherwise the speed and distance is relative to the camera (as it was before this change).",
+    "Changed display of celestial object UI box and marker to be always ON if it is the current target of the controlled vehicle. This allows for easier rendevous.",
+    "Add commented out pbr lighting for point lights",
+    "Added version number to menu bar so that users known which version they are running easier",
+    "Added current target and relative inclination between vehicle and burn orbit when a target is set."
+  ]
+}

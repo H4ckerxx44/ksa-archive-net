@@ -1,0 +1,33 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2263,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1411247366065098752",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1410925720414326898",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1410931354429952031",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411060796032815217",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411061384631943168",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411170001171255338",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411176191066378271",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411191916900520138",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411208065893666867",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411233860997611520",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1411244327375605863"
+  ],
+  "changes": [
+    "Fixed digit rollers could heavily overshoot at large warp speeds, causing them to oscillate. Now digit rollers will instead snap at significant simulation speeds to prevent this.",
+    "Fixed aspect ratio not correctly locked during resizing for some gauge panels.",
+    "Added a very small alignment offset for roller digits, almost imperceptible. This aligns them visually with real world rollers, which have a very small alignment variation per digit.",
+    "Fixed planet renderer buffers' alignments.",
+    "Fixed terrain material textures not matching up with the tessellated surface.",
+    "Removed Size struct attribute layout for the PlanetUbo and MeshUbo as they are now automatically padded to the minUniformBufferOffsetAlignment.",
+    "Converted unused mean anomaly at epoch in the set orbit debug menu to time since periapsis which can be used in this case.",
+    "Fixed thrust-to-weight calculation. Previously it was actually exhaust-velocity-to-mass.",
+    "Added extra digit to rollers on Rendezvous Control panel.",
+    "Added XML parsing and stripping for easier and cleaner export of edited gauge canvases from within in the game.",
+    "Reverted the change to properly handle multiple trajectory events simultaneously because it caused two important regressions (failure to compute trajectories after escapes, failure to show closest approach to target).",
+    "Added another significant digit for rendezvous control panel to bridge gap completely from KM to GM and beyond.",
+    "Changed threshold values for time rollers, to provide better readability as the values move through hours, minutes, and to seconds.",
+    "Fixed gauge roller animations would have a weird backwards animation when rolling from 9 to 0. This had a variety of causes and required a complete rewrite of roller animation."
+  ]
+}

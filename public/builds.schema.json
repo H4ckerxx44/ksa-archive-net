@@ -43,6 +43,9 @@
         "comment": {
           "description": "An additional comment for this build",
           "type": "string"
+        },
+        "hasChangelog": {
+          "description": "If this version has an archived changelog entry"
         }
       }
     }

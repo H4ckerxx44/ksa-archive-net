@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3423,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1469242660551262280",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469179045903077498",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469187813160390783",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469195890811207734"
+  ],
+  "changes": [
+    "Added ability to change the flow rule for each engine's context menu.",
+    "Added flow rules to ResourceManager. For now we have four defined.",
+    "Changed default flow rule for engines to be furtherest to nearest tank - only in same stage as the engine.",
+    "Fixed the UI draw flow graph to actually draw correctly based on the selected flow mode.",
+    "Fixed stage highlighting in the debug vehicle editor getting undone by mouse hover highlighting.",
+    "Fixed flow graph drawing in the debug vehicle editor.",
+    "Added logic to set stages on parent parts up to decouplers to match engine stage when attaching an engine in the debug vehicle editor.",
+    "Added logic to pre-fill tanks on parent parts up to decouplers when adding a new engine in the debug vehicle editor.",
+    "This is some basic logic for now, and will most likely change."
+  ]
+}

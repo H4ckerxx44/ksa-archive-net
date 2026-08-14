@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3428,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1469868021018267832",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469457801092005909",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469501142898573353",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469512065654853866",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1469570964848382113"
+  ],
+  "changes": [
+    "Fixed potential infinite fuel scenario where an engine has no tanks available to it (due to flow rules) but the vehicle still has the fuel the engine uses.",
+    "Fixed deserialize of engine active bool when loading vehicles from saves.",
+    "Fixed the two test vehicles \"rocket\" and \"Gemini7\" to have their main engine active when loading the game.",
+    "Moved the enforcement of maximum gimbal angle from the flight computer to the simulation.",
+    "Added an XML specification for maximum gimbal angles in the Y and Z directions. We no longer create components for gimbals with zero maximum angle.",
+    "Made it possible to add game data to sub part instances.",
+    "Increased maximum WASD slew rate from 30 deg/s to 45 deg/s.",
+    "Changed TransformReference to have nullable fields so we can tell the difference between an identity value and an unset value.",
+    "Removed PartConnector template reference and cached important transform variables to avoid calling through to the expensive template versions.",
+    "Changed the order of the stabilization toggle function. If the flight computer is set to track a specific target, the first toggle will now drop to RATE mode in that same frame. The second toggle will set attitude control to MANUAL.",
+    "Major overhaul of the auto-warp logic internals. We now interpolate between the start and end times of the warp with smootherstep, which means all auto-warps take exactly the same amount of player time and end precisely where they are targeted to.",
+    "Added a three-second margin when auto-warping to planned burns."
+  ]
+}

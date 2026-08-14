@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 4826,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1522492552056672267",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1522493086993748130",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1522493668857086104",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1522487446292533410"
+  ],
+  "changes": [
+    "Significantly improved the performance of terrain sampling by skipping most unnecessary work.",
+    "Place the terrain patch at the predicted vacuum impact point rather than directly under the vehicle to avoid sampling terrain we will never hit.",
+    "Don't sample terrain at all until an impact is imminent.",
+    "Improved tracking of when resampling is actually necessary.",
+    "As a side benefit, improved the prediction of the terrain impact point as seen by the Kepler orbit lines (by using the same method)."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3047,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1448570837929168949",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1448385088113873133",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1448392495506522387",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1448392496697708604",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1448451608882057389",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1448504560866951260"
+  ],
+  "changes": [
+    "Eliminate redundant combustor entries on the kitten MMU - all thrusters can share a single entry because we copy it when converting to runtime entities anyway.",
+    "Added terrain normal alignment to ground clutter.",
+    "Ground clutter is now able to sample the exact terrain height, processing the procedural modifiers. This results in a second compile of HeightFuncs.glsl which is slow on AMD due to the switch-case.",
+    "Added automatic shader compilation depending on whether ray queries are supported or not. If supported, a global macro 'RAY_QUERIES_SUPPORTED' is defined for shaders.",
+    "Removed unused ground clutter functions.",
+    "Removed unused 'meshTriangleIndex' field from ground clutter ObjectData struct.",
+    "Added new graphics section \"Terrain\".",
+    "Added new graphics setting \"Ground Clutter\", off by default while it's WIP.",
+    "Moved terrain tessellation graphics setting into the ground clutter section.",
+    "Moved ground clutter renderer out of main Program into PlanetRenderer.",
+    "Removed Multisampling from AMD 5000 and 6000 series GPUs. There are currently severe graphical artifacts caused by Multisampling on these GPUs.",
+    "Added serialization and deserialization of InstanceId of parts and subparts into game save files. This will allow us to identify the correct instances of parts and subparts for serialization of additional data at the part and subpart level.",
+    "Fixed display of InstanceId ion SubPart and Part Menu UIs  in the Vehicle Editor tool."
+  ]
+}

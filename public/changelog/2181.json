@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2181,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1409405401497210920",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409324221321969738",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409324968751136770",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409341883812937799",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409345529242062908",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409349808606548060",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409356488497037353",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409373840303194235",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409378665258684448",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409379270505140347",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409387230912319568",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1409402046939004960"
+  ],
+  "changes": [
+    "Tweaked Atmospheric wind sound values.",
+    "Added Separate modifier for Sim-speed-pitch to ChannelWrapper class.",
+    "Fixed bug where pitch was incorrectly getting modified by a volume multiplier.",
+    "Tweaked HighpassFilter distance fallOff on Spatialized sounds and added low-pass-filter as well.",
+    "Added a sound reference can now be assigned a Sim-Speed rule in the xml data to describe how it will be effected by sim-speed: \"Ingore, All, OnlyLower, OnlyHigher\"",
+    "Added preprocessor instructions so vulkan validation layers aren't enabled in non-dev builds.",
+    "Added a comment to a rendering fix.",
+    "Added Apoapsis and Periapsis gauges to show the current in meters as an initial implementation, first pass, for extra orbital data in the gauge system directly.",
+    "Gemini7 is now loaded in and rendered as parts and subparts. Still quite a bit of work to do to get the current systems nicely hooked in to parts.",
+    "Tweaked the sun bloom effects to be more subtle. Further changes and balancing to come.",
+    "Migrated the warp to next Imgui to be a button on the periapsis and apoapsis gauge objects. When clicked, they will toggle the warp on and off for that event. Needs some optimization, as hopefully we can cache the orbit values for these on the workers as it won't change during the frame."
+  ]
+}

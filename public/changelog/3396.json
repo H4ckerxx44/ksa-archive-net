@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3396,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1468471468982796395",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468349980434501889",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468354248197804223",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468401837081231523",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468411605308932182",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468425927032569998",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468433433167532104",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468434678028435538",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468436905665368217",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468446355986055221",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468448255703646249",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1468467114804383829"
+  ],
+  "changes": [
+    "Added engine gimbal controls to the flight computer. When engines are firing and engine gimbal authority in a particular axis exceeds available RCS authority, engine gimbal will take over attitude control.",
+    "Select optimal TVC gains using LQR control. Added several new matrix math extension functions to support this.",
+    "Fixed auto burn not starting in some cases if the relaxed profile was selected.",
+    "Fixed incorrect gimbal offset position when rotation was nonzero.",
+    "Render instanced meshes inside planetary rings: Divide the viewable space into chunks culled on the GPU then sample and cull mesh instances for each chunk inside the ring and the view frustum. Assign an instance buffer sized for the maximum instances we can see for the view frustum and current ring configuration. Meshes currently orbit at different speeds depending on their orbits but this is implemented in a temporary way and has a few issues with jittering, and dirfting at high time compression values.",
+    "Fade from the ring volumetric effect to meshes",
+    "Set a placeholder config of rocks inside saturn rings, use existing lunar rock model. Current rocks have a shading model that doesn't blend/fade perfectly with the ring's look or Saturn's rings being made of ice particles, a differet shading model for ice particles will be added",
+    "Use LODs on the ring meshes similar to the ground clutter system, not using a unified instance buffer and LOD sorting yet so VRAM usage is higher than it needs to be at the moment",
+    "Use NormalizeOrZero in the clouds shadow volume to harden against some divisions by zero",
+    "Added de/serialization of Stage info into vehicle/game saves.",
+    "Fixed game crash if you start one of the game settings where there are no planets with rings.",
+    "Part diffuse maps are now KTX2 rather than DDS.",
+    "Added feedforward gains to the flight computer TVC controller which eliminates the vast majority of overshoot.",
+    "Use output engine throttle to compute gains rather than input engine throttle.",
+    "Fixed typo in part game data XML file.",
+    "Fixed empty ID in log message when loading instances of situation templates.",
+    "Part normal maps are now KTX2 rather than DDS. Please do not curse me with inverted normals.",
+    "Added ability to change part stage via part menu in the debug vehicle editor.",
+    "Added logic to automatically increase the vehicle stage number when connecting parts that contain a Decoupler component in the debug vehicle editor.",
+    "Fixed orbit camera could end up trapped inside a part while clicking. This happened because the clicking action was recorded outside of the previous scope, causing it to not use any drag-safety checks. It would also activate on any type of click, which was not intended."
+  ]
+}

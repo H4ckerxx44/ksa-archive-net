@@ -1,0 +1,38 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2540,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1430771892016644197",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430387053249691739",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430397580877103176",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430599697029922816",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430650423794073613",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430702917459116204",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430706922117533807",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430763783088898089",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430766160546107495",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1430768053792145518"
+  ],
+  "changes": [
+    "Fixed issue with modifying burns causing subsequent burns to be drawn in the wrong locations.",
+    "Rationalized data in Burn class. Removed references to OrbitPointCce and PatchedConic. These can be determined when required instead of storing references.",
+    "Fixed backwards matrix multiplication causing subpart->part->vehicle transforms to be out of order. This fixes the new part thrusters not lining up correctly visually. Fixes for the automapping being incorrect coming with proper model rotations SoonTM.",
+    "Add optional feature to color match clouds to terrain, use on Mars to match dust storms locally to the ground color",
+    "Add a per-planet max cloud shadows altitude setting",
+    "Fix seams on cloud shadow main texture derivatives, most visible on Mars, use the same methods as Planet.frag",
+    "Tweak dust storm settings",
+    "Sample mips in 2d clouds shader",
+    "Soft-fade cloud shadows when terrain approaches cloud top",
+    "Fixed incorrect visible area calculation for the Default mesh collection.",
+    "Changed the fly camera minimum terrain height to 2 meters now that we can better visually represent this scale.",
+    "Fixed windowed screen size being offset by the OS window decorations.",
+    "Fixed a small spelling mistake in the description of the 'invert' button on the RCS UI.",
+    "Added support for gltf parent node transforms for meshes. It shouldn't change anything right now but may make rotating things easier later. If your mesh is rotated all weird all of a sudden this is why but I think I got them all.",
+    "Fixed orientation of new gemini parts. The autokeymapping should be oriented correctly. This does not change the current requirement to toggle the editor for the autokeymap to take effect. Should be my next change.",
+    "Changed calculation of mesh vertex position mins and maxs to use gltf's rather than be recalculated.",
+    "Changed auto keymapping for RCS to effect both in editor as well as when there is no control manually set.",
+    "Added preparation code for thumbnail editor",
+    "Adjusted access modifiers for some functions in program to be public for editor usage.",
+    "Moved TransitionImage func for Atmosphere LUTs from Program to the Atmosphere Renderer"
+  ]
+}

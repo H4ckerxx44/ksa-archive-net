@@ -1,0 +1,36 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2101,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1407181236660731926",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1407219761238245467",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407027136916750409",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407097485989515397",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407117093416996864",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407147109517627474",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407150713137532969",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407168574723981453",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407170578858905690",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407170897063710871",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407171322907463781",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407175896913281064",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407178045856682117"
+  ],
+  "changes": [
+    "Fix ocean-surface z-fighting issues resulting in circles and other patterns appearing on the surface near shores",
+    "Improve ocean performance especially with MSAA by not using late-z",
+    "Added missing tooltip text for the STAR frame NUL ROT button.",
+    "Changed BALANC to BALNCE on the attitude autopilot panel.",
+    "Limit thruster pulse rate in low thrust mode so it's more obvious what's going on and even finer control is possible.",
+    "Relabel HIGH and LOW to DIRECT and PULSE with updated tooltips.",
+    "Default RCS to DIRECT mode.",
+    "Reduced minimum pulse time on Gemini thrusters which was way too long (real thrusters have transients which we don't currently model, so the real pulse data produces way too much thrust in the game at the moment).",
+    "Remove initializing NLog in logging system",
+    "Refactor Target reference from Vehicle to FlightComputer. Rasoning to my madness - so we can more easily manage and implement the Target reference frame",
+    "Added Tgt Reference Frame to FlightComputer.",
+    "Fixed inability to double click to swap to a vehicle due to creating burn nodes eating the click. This does break double clicking for multiwindows but there isn't a quick fix until we have the new ImGui backend.",
+    "Changed set target to NOT run a full burn plan and flight plan update.",
+    "Added master version checking. This will (by default) automatically be checked on startup, but can also manually be trigged under the 'file' menu. If update is available, and user selects, the download site will be visited. Automatic updates will be handled later. For now only one master server is available, but alternates will be available and users will be able to modify the master server addresses, in the event of company death.",
+    "Removed redundant JSON logging."
+  ]
+}

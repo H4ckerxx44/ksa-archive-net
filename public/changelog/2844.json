@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2844,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1440939089506598953",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440534838133395497",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440537663529549905",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440540423939686473",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440541723913748521",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440558884271165550",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440576864883179630",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440811860843696228",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440826809296879787",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440840022713565205",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440840831111008286",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440864335726641182",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440872497955213314",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440881764351479858",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1440911784830701599"
+  ],
+  "changes": [
+    "Tuning of animation blending speeds for MMU (Still very WIP)",
+    "Added a setting so you can permanently toggle the map grid on or off.",
+    "Fixed a case where vehicles out of proximity to other vehicles would have their flight computers dispatched twice on the first update step. As a side effect, this prevented thruster pulse mode from functioning.",
+    "Begin pulling Kitten into the mod system. Values previously hardcoded, are now read from CharacterAssets.xml. This means that custom animations and character meshes can be used instead of the default kitten. Custom textures are not yet implemented into the mod system for the kittens.",
+    "Converted kitten meshes from glb to gltf. This means that the kitten's textures are no longer packed directly into a glb, exposing the textures to make updating and modifying textures much easier.",
+    "Added Albedo and NormalMap indices to CharacterAsset.xml. This is used to inform which albedo/normalmap textures are mapped to the kittens head, and lets us reuse those textures for the kittens fur to make the transition from headmesh to kitten fur as seamless as possible.",
+    "Fixed ability to see through the oceans and Earth and into the stars behind at some heights above the ocean surface. This should also fix some of the MSAA related issues on some AMD cards. Oceans can be less performant on higher MSAA settings now. This does not completely fix the 'White Earth' problem on some AMD cards but you should be able to see the land now without having to turn off the oceans.",
+    "Fixed crash when issueing meshes console command.",
+    "Kittens now use ORM textures instead of RMA. This brings us in line with gltf texture standards. This update will be done to vessels shortly.",
+    "Vessel material textures updated to ORM format",
+    "Added Shift-E hotkey for Editor toggle.",
+    "Added Vehicle constructor that allows root part and orbit to be passed in instead of constructing these from the vehicle template.",
+    "Added ability to create separate vehicles from UnattachedPartTrees in the VehicleEditor. You can create new vehicles now from unattached part trees by setting the Create New Vehicle toggle in part UI within the vehicle editor.",
+    "Added ability to change the assigned vehicle on a part. But just setting this will not magically move the part to another Vehicle.",
+    "Added Kitten shader references to DefaultAssets.xml. Previously shaders were hardcoded inside the different renderers for the kitten, however now they are properly exposed.",
+    "Enabled backface culling on the kittens, previously culling was disabled.",
+    "Assorted kitten animation parameters now have the required flag, to ensure that data gets pulled in from the mod library properly in the future.",
+    "Fixed an inconsistency in how eccentricity is computed from state vectors which could cause an out-of-domain acos calculation for nearly-circular orbits.",
+    "Moved KittenFur into kittens gltf, instead of existing outside of any asset description as a global texture. While this doesn't mean much right now, its a step towards detangling the kittens current implementation to make multiple unique kittens possible in the future.",
+    "KittenFur is now a png again, when it was converted to a dds, it was exported as an SRGB meaning the kitten fur length and coverage weren't true to the created mask. As a result the cat now looks fluffier. Expect the kitten fur mask to be re-compressed soon, with proper settings."
+  ]
+}

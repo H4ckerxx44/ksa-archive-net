@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3103,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1450958157307187283",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1450798182370902028",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1450920014373716200",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1450920015745257586",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1450920017825890304",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1450952726551859272"
+  ],
+  "changes": [
+    "Fix crash in CharacterRenderer and SuperMeshRenderSystem when their shaders are changed via the hot reloader, reload their shaders on rebuild",
+    "Fixed synchronization issues with ground clutter.",
+    "Temporarily disabled ground clutter unloading and let new cells overwrite the old data.",
+    "Temporarily padded CellData struct to meet minimum offset requirements. To avoid this, I'm going to move away from dynamic descriptors and use two separate buffers instead.",
+    "Removed temporary forced clutter regeneration when new cells are generated. Now, this only occurs when the mesh snaps and new cells without a mesh snap generate only what is required.",
+    "Removed double/triple buffering for the instance matrix buffer, it was unneeded as the ground clutter synchronization issues were caused by host-to-device writes.",
+    "Moved away from dynamic ubo/storage buffers. They are not as widely supported as just using multiple buffers and come with baggage that makes managing them generally more inefficient. This completes the synchronization fixes.",
+    "Fixed NRE when trying to dispose the ground clutter renderer if no clutter exists.",
+    "Fixed all celestials orbits not having their points cached - which meant no celestials have orbit lines, in worker from performance changes that were made."
+  ]
+}

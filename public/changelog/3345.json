@@ -1,0 +1,30 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3345,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1466676769988804687",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466599264091373689",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466609820512686203",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466626122287677550",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466635025221943296",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466635866113048629",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466640248741040403",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466644901671342211",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466644902959120476",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1466668035094876347"
+  ],
+  "changes": [
+    "Added PartDecoupler part component class. Doesn't function yet, but stay tuned - it soon will.",
+    "Added PartDecoupler component to existing interstage fairing parts.",
+    "Changed Decoupler part component, it does not need to be stateful.",
+    "Created a PartTree.Merge to accompany PartTree.Split and made the two methods roughly symmetric in how they operate.",
+    "Changed vehicle editor snapping to use screen space instead of assembly space.",
+    "Moved the point of nonzero mass property checks into the physics system instead of the part system to suppress spurious errors.",
+    "Changed running Id to be a uint rather than ulong to align with project standards.",
+    "Added StageList to PartList. This is used to manage stage assignment of parts in a part list.",
+    "Added temporary UI to Vehicle editor for Stage management, with some rudimentary capabilities.",
+    "Added a fallback when raycasting towards a newly spawned part in the editor fails.",
+    "Fixed spawning a new part not properly resetting 'selected' values of child parts.",
+    "Added new part context menu and window. When right clicked, a part will show a condensed context menu including actions such as Decouple, and fuel tank status. A \"Window\" open will pull the context menu out into a moveable pinned window with further information, and will remain until closed."
+  ]
+}

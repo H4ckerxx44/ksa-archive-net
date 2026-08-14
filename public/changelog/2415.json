@@ -1,0 +1,37 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2415,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1419873627419181118",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419529218546597910",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804490546155532",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804491649122414",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804492672532563",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804493792546886",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804494853832754",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419804495847624876",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419832519821496411",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1419867509447725107"
+  ],
+  "changes": [
+    "Fixed making additional modfolders would cause an exception. This was caused by the async loading task being embedded inside the load for a modfolder, meaning multiple instances were generated when multiple modfolders exists. This has been moved outside. Next task is to split 'core' into submods to allow easier total conversion mods and better data separation down the line.",
+    "Added gradient evaluation to CubicHermiteSpline.",
+    "Changed terrain modifier LUT from R16 storing value to R16G16 storing value and gradient.",
+    "Added gradient voronoi noise function.",
+    "Added simple craters gradient function (stage 1).",
+    "Added 'Gradient' map type to the planet map exporter.",
+    "GetHeightMetersAt() in HeightFuncs.glsl now returns the gradient as well as the height value.",
+    "Fixed derivative/gradient miscalculation in the Simplex Noise library where subsequent octave gradients were not being rescaled by the new frequency.",
+    "Changed procedural modifier LUT format from R16G16Unorm to R16G16SFloat to allow negative values for cubic hermite spline derivatives.",
+    "Added Eroded Craters modifier.",
+    "Added shader logic and CPU logic for the new eroded craters modifier.",
+    "Fixed errors in the simplex noise library where the gradient was incorrectly scaled.",
+    "Improved gradient calculation in the erosion function. Not yet sure if this is correct but it's a decent approximation.",
+    "Corrected modifier gradients by scaling by the celestial radius reciprocal. Not all modifiers return correct gradients yet but this scaling was missing.",
+    "Added a gradient visualisation to the planet exporter which computes the surface normal from the planet gradient rather than by using central differences. This will be useful for validating whether modifier gradients are correct.",
+    "Adjusted existing Erosion modifiers on Earth and Mars to respect the changes to the Erosion function.",
+    "Fixed calculation of Argument of Periapsis when creating orbits where our Ascending Node is in the plane. In this case we must use the two dimension equation.",
+    "Fixed planet map exporter not disposing gradient map resources.",
+    "Fixed planet map exporter always opening with 4096 x 2048 resolution. Now defaults to 1024 x 512 unless a different viewport size is provided."
+  ]
+}

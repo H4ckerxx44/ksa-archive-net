@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3549,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1472821147677753405",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472221149952999544",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472221150842196042",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472532272501624915",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472715913118879774",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472727848564297894",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472766506159968429",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472791027365449829",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472795053121343591",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472811025433886771",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472815484029370463"
+  ],
+  "changes": [
+    "Replaced HasFlag call with the raw flag check to avoid allocations in ProceduralModifiersRenderData.",
+    "Fixed a minor seam in Earth's normal map.",
+    "Renamed IOrbiting to IOrbiter which permits more natural variable names in a few places.",
+    "Created IParentBody, a new interface for objects which can be orbited by IOrbiters.",
+    "The three archetypes are now StellarBody (IParentBody), Vehicle (IOrbiter), and Celestial (IParentBody, IOrbiter). This means Astronomical does not implement either, so a bunch of boilerplate that was not appropriate for Vehicle has been removed.",
+    "Created IOrientation and IPerFrameCache to cover a few other loose ends.",
+    "Removed Astronomical.Reset() which hasn't been necessary for a while now.",
+    "Changed the 'Copy Tree' button in the debug editor to copy as if the current selected part is the tree root.",
+    "'Remove All' in the Debug Vehicle Editor works again when you are editing an already spawned vehicle.",
+    "Fixed a doubled connection when using connectors over symmetry.",
+    "Fixed an issue where special formatting identifiers were getting passed through to ImGui without proper sanitization causing crashes when viewing version history. This needs followed up on as this should not be possible.",
+    "Fixed an issue where a symmetry's radial order wasn't being set in some cases causing incorrect behavior.",
+    "Fixed bug where its possible to get two stages with the same stage number.",
+    "Fixed bug where attaching engines in symmetry sets were causing extra stages and some parent parts to not match stages.",
+    "Delete unused Sol_Diffuse.ktx2 texture"
+  ]
+}

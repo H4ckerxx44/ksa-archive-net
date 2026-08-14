@@ -1,0 +1,42 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2634,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1434758829626884128",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434636275423510630",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434636277562478602",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434636278468579513",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434655771957657702",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434664479836209295",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434674911418388572",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434688280984555561",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434702475159539812",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434719328242237461",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434737143086846062",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434740083335893033",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434744360456556576",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434747669271674951"
+  ],
+  "changes": [
+    "Added biome exporter shader: GenerateKernelSizes.comp.",
+    "Added biome exporter shader: VariantMaxFilter.comp.",
+    "Added biome exporter shader: VariantBoxBlurFilter.comp.",
+    "Moved biome exporter image processing functions to compute shaders.",
+    "Added save functionality to the biome map exporter, which saves as PNG.",
+    "Removed unused OnFrame and Render function calls to the biome exporter from PlanetRenderer.",
+    "Added WIP WarpedHybridMultifractal procedural terrain modifier.",
+    "Fixed mars mesh snapping too infrequently and causing the highest density region to sometimes be too far from the camera.",
+    "Added disposing of renderer resources to the biome map exporter.",
+    "Added Kitten Eva class. This could be the start of something big. For now a kitten is based on Vehicle class. This could change over time as things progress.",
+    "Added thin film interference maps to some subparts.",
+    "Added KittenEva template changes so we can have Kittens.",
+    "Compressed diffuse/PBR/thin film texture maps to DDS BC1.",
+    "Increased thin film interference intensity, to make the effect more visible when using custom masks.",
+    "Added light system shadows toggle",
+    "Fixed missing settings checks for shadows in GameSettings constructor copy and IsChanged functions.",
+    "Added IsUserTyping flag to GameSettings to block input while editing text fields. This should prevent console settings (e.g. OnBoot/OnLoad) from canceling prematurely when typing.",
+    "Namespace clean up",
+    "Changed invalid parts of flightplan/burnplan orbits draw in Inactive Orbit color to make it a better UX experience.",
+    "Added first pass for SOI music for Earth, Moon, Sun, Mars and Jupiter."
+  ]
+}

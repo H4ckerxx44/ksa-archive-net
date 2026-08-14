@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3563,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1473179755716149258",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1472906754567307305",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473041901216202822",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473045567130046699",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473088960086540308",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473090937059016764",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473093627818279245",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473116029214523564",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473118361599606814",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473122864130425042",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473143194492338214",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473153881042321602",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473167854827474985",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1473176836191162460"
+  ],
+  "changes": [
+    "Fix seams visible on the planet from orbit with the ocean shore filtering, caused by height cubemap mips not generated with neighbour/cubemap awareness",
+    "Increased Pan's SOI to 50km, allowing it to be more easily intercepted and allowing landing on its ridge which was previously outside the SOI.",
+    "Fixed seam in Earth's diffuse texture caused by incorrect mip generation.",
+    "Fixed an error where only one of many parallel gimbaled engines would function.",
+    "Updated Core Propulsion A Assets. Two new engines added and are unconfigured for now: A5, A6.",
+    "Changed RocketReference to use the Part Template's Id for lookup. We'll need to do more work here for situations when there's more than one SubPart using the same Part Template.",
+    "Added editor tags for engines.",
+    "Updated Brutal ImGui package to 2026.2.0 which should resolve potential printf style formatting problems.",
+    "Moved gimbaled nozzle control data cache from the flight computer to the gimbal controller.",
+    "Fixed multi-engine gimbal control instability at high time warp.",
+    "Added some floatQuat extension convenience methods.",
+    "Added Battery PartComponent and BatteryState.",
+    "Added Joules struct for energy management.",
+    "Added JoulesReference for context formatting/reference of Joules.",
+    "Added BatteryTemplate to PartTemplate.",
+    "Fixed bug when attaching an interstage with decoupler onto a part that also has an engine attached not setting staging correctly.",
+    "Fixed ground clutter not receiving the sphere celestial shadow. Ground clutter will no longer be lit from below at night.",
+    "Replaced all enum HasFlag calls with our own solution to avoid allocations",
+    "Added autohide feature as an option on windows using the base ImGuiWindow class. This will hide the menubar and title when the window is not hovered.",
+    "Added Autohide default to on for the staging window and editor part windows, to reduce visual clutter.",
+    "Fixed bug with detatched ImGuiWindow base windows, where when being reattached they would retain their old position, which is off of the screen. Now when reattached to the main screen, their ID and other attributes will be reset."
+  ]
+}

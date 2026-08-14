@@ -1,0 +1,39 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 3011,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1446388385894629426",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446040891469987910",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446041317598695455",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446253118340858076",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446262161725984952",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446269928536670272",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446305253254234146",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446311846486347837",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446323228006940864",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446353017778733057",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1446356266371776564"
+  ],
+  "changes": [
+    "Fixed reversed cm <-> m conversion.",
+    "Added cm^2 <-> m^2, cm^2 <-> m^3, and mm^2 <-> m^3 conversions so it's less easy to forget to convert each dimension individually.",
+    "Added mm^3 input to VolumeReference.",
+    "Fixed conversion factors in VolumeReference.",
+    "Removed VolumeReference methods that were copied over from distance and don't apply to volume.",
+    "Renamed VolumeReference some copy/paste variables.",
+    "Fixed VolumeReference string conversion.",
+    "Converted several unit powers to fancy superscripts in string printouts.",
+    "Reverted test XML with mm^3 volume.",
+    "Kitten fur mask can now be defined directly in xml.",
+    "Character attachment system now supports multiple materials. This means that the MMU now goes through the proper texture system. MMU textures have also been compressed to ktx2 as a result.",
+    "Added character cosmetic attachment system. While this is not currently used in game, it allows for additional meshes to be attached to characters as defined in XML.",
+    "Fixed bug that would sometimes give Hunter wrong fur material",
+    "Fixed Vulkan crashing the app on startup 1/4-5 times under Linux.",
+    "Re-adding Brutal.Monitor after fixing issues with the Subprocess in packaged/installed builds of KSA",
+    "Re-revert Brutal.Monitor. It crashes for some people on some platforms",
+    "This reverts commit 0a3aff06d35d39169c28e2811390c1050867da25.",
+    "Added a system for generating a random kitten. This system is not currently used in the game, however it allows us to generate a randomized kitten based on data defined in XML, instead of needing to explicitly define a kitten everytime we want to generate one. As part of this, attachments and gltfs can now explicitly have their usage or attachment type explictly defined inorder to help the kitten generator determine the different usecase of assets.",
+    "Removed excessive logging caused when loading the kitten.",
+    "General kitten code cleanup."
+  ]
+}

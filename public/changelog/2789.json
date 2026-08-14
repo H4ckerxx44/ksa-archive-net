@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2789,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1438739912378679426",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438687636029046794",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438690265656328213",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438693118919708713",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438697388494815333",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438702767139979498",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438720798767452191",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1438731663742865512"
+  ],
+  "changes": [
+    "Changed the Kitty MMU thrusters to be more reasonable in the thrust generated.",
+    "Removed console-to-screen text fading for start up for most messages. The first screen when starting should be quite a bit cleaner now.",
+    "Fixed NaNs produced by the Voronoi noise functions.",
+    "Rescaled the ranges for the terrain modifier values in the GUI to cover commonly used values.",
+    "Changed the drawing of the UI astronomical object markers to be visible at much closer range in Map camera mode to allow the player to set target in map mode for objects close to the one they are controlling.",
+    "Updated Welcome Text Popup to have up to date gameplay information",
+    "Fixed Transfer Planner Window Porkchop texture disappearing when you switch between Transfer Types.",
+    "Changed CATCH EigenValues error debug message to info message.",
+    "Turned off the CATCH Eigenvalues message for now until we fix the console window messages."
+  ]
+}

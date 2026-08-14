@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2620,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1434391165670522902",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1433731936202919950",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434115601722511410",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434338545300013096",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434338546663293012",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434338547480920206",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1434338548756254720"
+  ],
+  "changes": [
+    "Use the atmosphere ambient LUT for the vessel diffuse ambient instead of using a single sample of the sky LUT, reduces reflective/metallic look on matte parts in the absence of a pre-filtered environment reflection method",
+    "Use a better Jupiter texture, in preparation for Jupiter volumetrics",
+    "Initial porting of external biome tool to KSA.",
+    "Lowered the curvature of Earth's erosion.",
+    "Added erosion to Mars.",
+    "Fixed white-screen graphical error caused by rare div-by-zero in the procedural modifiers code.",
+    "Added GradientStrength parameter to procedural modifiers for artificially scaling the terrain gradient.",
+    "Added the Max filter stage to the biome map exporter.",
+    "Removed the old sand dunes from Mars and replaced them with the newer version.",
+    "Updated Mars' normal map."
+  ]
+}

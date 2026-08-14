@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The schema for KSA changelogs",
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "The numerical version number for a KSA build",
+      "minimum": 0,
+      "type": "number"
+    },
+    "sources": {
+      "description": "A list of sources for the changelog details",
+      "type": "array",
+      "items": {
+        "description": "A source for a changelog (i.e url, user, etc..)",
+        "type": "string"
+      }
+    },
+    "changes": {
+      "description": "A list of changes within a KSA build",
+      "type": "array",
+      "items": {
+        "description": "A change within a KSA build",
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ksa-archive.net/changelog.schema.json",
+  "version": 2112,
+  "sources": [
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1407329482284470313",
+    "https://discord.com/channels/1260011486735241329/1406840455093682258/1407340071669207121",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407027136916750409",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407097485989515397",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407117093416996864",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407147109517627474",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407150713137532969",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407168574723981453",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407170578858905690",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407170897063710871",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407171322907463781",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407175896913281064",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407178045856682117",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407214631092752455",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407217064019623959",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407220952332501113",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407231709727952948",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407234090746384546",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407245278431416360",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407281721308745899",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407308445539106867",
+    "https://discord.com/channels/1260011486735241329/1260112103134724146/1407325142534721566"
+  ],
+  "changes": [
+    "Update TOML to 6.2.0 with invalid enum dictionary fixes",
+    "Moved the target reference back to the vehicle because we'll need to pass derived data to the flight computer instead. + Pass target data to the flight computer via the nav struct. + Added calculations for the TGT (target) frame of reference.",
+    "Fixed critical issue, when a new update is available and the welcome window is open - the second popup will disable input. This is because both popups are modal - and the first closes the second but leaves modal operation in place. Not popups enforce only one modal one at any time.",
+    "Refactored Cloud and Exhaust Quality settings, so that by default debugging quality settings for upscaling are not included. This is because users may be confused about which settings provide better quality volumetrics. These have been changed to say quality with descriptive words."
+  ]
+}
