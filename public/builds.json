@@ -2,17 +2,20 @@
   {
     "version": 1231,
     "date": "2025-04-17",
-    "winFile": "KSA v2025.4.100.1231.zip"
+    "winFile": "KSA v2025.4.100.1231.zip",
+    "hasChangelog": true
   },
   {
     "version": 1276,
     "date": "2025-05-01",
-    "winFile": "KSA_v2025.5.103.1276.zip"
+    "winFile": "KSA_v2025.5.103.1276.zip",
+    "hasChangelog": true
   },
   {
     "version": 1396,
     "date": "2025-05-25",
-    "winFile": "KSA_v2025.5.1281.1396.zip"
+    "winFile": "KSA_v2025.5.1281.1396.zip",
+    "hasChangelog": true
   },
   {
     "version": 1455,
@@ -37,12 +40,14 @@
   {
     "version": 1467,
     "date": "2025-06-05",
-    "winFile": "setup_ksa_v2025.6.92.1467.exe"
+    "winFile": "setup_ksa_v2025.6.92.1467.exe",
+    "hasChangelog": true
   },
   {
     "version": 1486,
     "date": "2025-06-08",
-    "winFile": "setup_ksa_v2025.6.126.1486.exe"
+    "winFile": "setup_ksa_v2025.6.126.1486.exe",
+    "hasChangelog": true
   },
   {
     "version": 1514,
@@ -52,7 +57,8 @@
   {
     "version": 1522,
     "date": "2025-06-10",
-    "winFile": "setup_ksa_v2025.6.245.1522.exe"
+    "winFile": "setup_ksa_v2025.6.245.1522.exe",
+    "hasChangelog": true
   },
   {
     "version": 1535,
@@ -62,7 +68,8 @@
   {
     "version": 1556,
     "date": "2025-06-11",
-    "winFile": "setup_ksa_v2025.6.397.1556.exe"
+    "winFile": "setup_ksa_v2025.6.397.1556.exe",
+    "hasChangelog": true
   },
   {
     "version": 1611,
@@ -77,62 +84,74 @@
   {
     "version": 1616,
     "date": "2025-06-18",
-    "winFile": "setup_ksa_v2025.6.606.1616.exe"
+    "winFile": "setup_ksa_v2025.6.606.1616.exe",
+    "hasChangelog": true
   },
   {
     "version": 1634,
     "date": "2025-06-21",
-    "winFile": "setup_ksa_v2025.6.1241.1634.exe"
+    "winFile": "setup_ksa_v2025.6.1241.1634.exe",
+    "hasChangelog": true
   },
   {
     "version": 1640,
     "date": "2025-06-23",
-    "winFile": "setup_ksa_v2025.6.1248.1640.exe"
+    "winFile": "setup_ksa_v2025.6.1248.1640.exe",
+    "hasChangelog": true
   },
   {
     "version": 1654,
     "date": "2025-06-24",
-    "winFile": "setup_ksa_v2025.6.968.1654.exe"
+    "winFile": "setup_ksa_v2025.6.968.1654.exe",
+    "hasChangelog": true
   },
   {
     "version": 1702,
     "date": "2025-06-25",
-    "winFile": "setup_ksa_v2025.6.1018.1702.exe"
+    "winFile": "setup_ksa_v2025.6.1018.1702.exe",
+    "hasChangelog": true
   },
   {
     "version": 1705,
     "date": "2025-06-26",
-    "winFile": "setup_ksa_v2025.6.1403.1705.exe"
+    "winFile": "setup_ksa_v2025.6.1403.1705.exe",
+    "hasChangelog": true
   },
   {
     "version": 1757,
     "date": "2025-07-01",
-    "winFile": "setup_ksa_v2025.7.54.1757.exe"
+    "winFile": "setup_ksa_v2025.7.54.1757.exe",
+    "hasChangelog": true
   },
   {
     "version": 1820,
     "date": "2025-07-03",
-    "winFile": "setup_ksa_v2025.7.347.1820.exe"
+    "winFile": "setup_ksa_v2025.7.347.1820.exe",
+    "hasChangelog": true
   },
   {
     "version": 1910,
     "date": "2025-07-18",
-    "winFile": "setup_ksa_v2025.7.417.1910.exe"
+    "winFile": "setup_ksa_v2025.7.417.1910.exe",
+    "hasChangelog": true
   },
   {
     "version": 1946,
     "date": "2025-07-25",
-    "winFile": "setup_ksa_v2025.7.367.1946.exe"
+    "winFile": "setup_ksa_v2025.7.367.1946.exe",
+    "hasChangelog": true
   },
   {
     "version": 2008,
     "date": "2025-08-05",
-    "winFile": "setup_ksa_v2025.8.19.2008.exe"
+    "winFile": "setup_ksa_v2025.8.19.2008.exe",
+    "hasChangelog": true
   },
   {
     "version": 2019,
     "date": "2025-08-09",
-    "winFile": "setup_ksa_v2025.8.6.2019.exe"
+    "winFile": "setup_ksa_v2025.8.6.2019.exe",
+    "hasChangelog": true
   },
   {
     "version": 2064,
@@ -147,7 +166,8 @@
   {
     "version": 2072,
     "date": "2025-08-14",
-    "winFile": "setup_ksa_v2025.8.32.2072.exe"
+    "winFile": "setup_ksa_v2025.8.32.2072.exe",
+    "hasChangelog": true
   },
   {
     "version": 2075,
@@ -158,410 +178,491 @@
     "version": 2076,
     "date": "2025-08-15",
     "winFile": "setup_ksa_v2025.8.43.2076.exe",
-    "comment": "first build(?)"
+    "comment": "first build(?)",
+    "hasChangelog": true
   },
   {
     "version": 2088,
     "date": "2025-08-18",
-    "winFile": "setup_ksa_v2025.8.17.2088.exe"
+    "winFile": "setup_ksa_v2025.8.17.2088.exe",
+    "hasChangelog": true
   },
   {
     "version": 2091,
     "date": "2025-08-18",
-    "winFile": "setup_ksa_v2025.8.33.2091.exe"
+    "winFile": "setup_ksa_v2025.8.33.2091.exe",
+    "hasChangelog": true
   },
   {
     "version": 2101,
     "date": "2025-08-19",
-    "winFile": "setup_ksa_v2025.8.59.2101.exe"
+    "winFile": "setup_ksa_v2025.8.59.2101.exe",
+    "hasChangelog": true
   },
   {
     "version": 2108,
     "date": "2025-08-19",
-    "winFile": "setup_ksa_v2025.8.86.2108.exe"
+    "winFile": "setup_ksa_v2025.8.86.2108.exe",
+    "hasChangelog": true
   },
   {
     "version": 2112,
     "date": "2025-08-19",
-    "winFile": "setup_ksa_v2025.8.100.2112.exe"
+    "winFile": "setup_ksa_v2025.8.100.2112.exe",
+    "hasChangelog": true
   },
   {
     "version": 2121,
     "date": "2025-08-20",
-    "winFile": "setup_ksa_v2025.8.282.2121.exe"
+    "winFile": "setup_ksa_v2025.8.282.2121.exe",
+    "hasChangelog": true
   },
   {
     "version": 2125,
     "date": "2025-08-20",
-    "winFile": "setup_ksa_v2025.8.14.2125.exe"
+    "winFile": "setup_ksa_v2025.8.14.2125.exe",
+    "hasChangelog": true
   },
   {
     "version": 2133,
     "date": "2025-08-21",
-    "winFile": "setup_ksa_v2025.8.19.2133.exe"
+    "winFile": "setup_ksa_v2025.8.19.2133.exe",
+    "hasChangelog": true
   },
   {
     "version": 2136,
     "date": "2025-08-21",
-    "winFile": "setup_ksa_v2025.8.20.2136.exe"
+    "winFile": "setup_ksa_v2025.8.20.2136.exe",
+    "hasChangelog": true
   },
   {
     "version": 2163,
     "date": "2025-08-22",
-    "winFile": "setup_ksa_v2025.8.285.2163.exe"
+    "winFile": "setup_ksa_v2025.8.285.2163.exe",
+    "hasChangelog": true
   },
   {
     "version": 2167,
     "date": "2025-08-23",
-    "winFile": "setup_ksa_v2025.8.21.2167.exe"
+    "winFile": "setup_ksa_v2025.8.21.2167.exe",
+    "hasChangelog": true
   },
   {
     "version": 2169,
     "date": "2025-08-24",
-    "winFile": "setup_ksa_v2025.8.22.2169.exe"
+    "winFile": "setup_ksa_v2025.8.22.2169.exe",
+    "hasChangelog": true
   },
   {
     "version": 2171,
     "date": "2025-08-25",
-    "winFile": "setup_ksa_v2025.8.287.2171.exe"
+    "winFile": "setup_ksa_v2025.8.287.2171.exe",
+    "hasChangelog": true
   },
   {
     "version": 2181,
     "date": "2025-08-25",
-    "winFile": "setup_ksa_v2025.8.288.2181.exe"
+    "winFile": "setup_ksa_v2025.8.288.2181.exe",
+    "hasChangelog": true
   },
   {
     "version": 2197,
     "date": "2025-08-26",
-    "winFile": "setup_ksa_v2025.8.23.2197.exe"
+    "winFile": "setup_ksa_v2025.8.23.2197.exe",
+    "hasChangelog": true
   },
   {
     "version": 2212,
     "date": "2025-08-27",
-    "winFile": "setup_ksa_v2025.8.289.2212.exe"
+    "winFile": "setup_ksa_v2025.8.289.2212.exe",
+    "hasChangelog": true
   },
   {
     "version": 2234,
     "date": "2025-08-28",
-    "winFile": "setup_ksa_v2025.8.292.2234.exe"
+    "winFile": "setup_ksa_v2025.8.292.2234.exe",
+    "hasChangelog": true
   },
   {
     "version": 2250,
     "date": "2025-08-29",
-    "winFile": "setup_ksa_v2025.8.293.2250.exe"
+    "winFile": "setup_ksa_v2025.8.293.2250.exe",
+    "hasChangelog": true
   },
   {
     "version": 2252,
     "date": "2025-08-29",
-    "winFile": "setup_ksa_v2025.8.294.2252.exe"
+    "winFile": "setup_ksa_v2025.8.294.2252.exe",
+    "hasChangelog": true
   },
   {
     "version": 2263,
     "date": "2025-08-30",
-    "winFile": "setup_ksa_v2025.8.24.2263.exe"
+    "winFile": "setup_ksa_v2025.8.24.2263.exe",
+    "hasChangelog": true
   },
   {
     "version": 2270,
     "date": "2025-09-01",
-    "winFile": "setup_ksa_v2025.9.2.2270.exe"
+    "winFile": "setup_ksa_v2025.9.2.2270.exe",
+    "hasChangelog": true
   },
   {
     "version": 2279,
     "date": "2025-09-02",
-    "winFile": "setup_ksa_v2025.9.3.2279.exe"
+    "winFile": "setup_ksa_v2025.9.3.2279.exe",
+    "hasChangelog": true
   },
   {
     "version": 2290,
     "date": "2025-09-03",
-    "winFile": "setup_ksa_v2025.9.4.2290.exe"
+    "winFile": "setup_ksa_v2025.9.4.2290.exe",
+    "hasChangelog": true
   },
   {
     "version": 2298,
     "date": "2025-09-04",
-    "winFile": "setup_ksa_v2025.9.5.2298.exe"
+    "winFile": "setup_ksa_v2025.9.5.2298.exe",
+    "hasChangelog": true
   },
   {
     "version": 2300,
     "date": "2025-09-04",
-    "winFile": "setup_ksa_v2025.9.2.2300.exe"
+    "winFile": "setup_ksa_v2025.9.2.2300.exe",
+    "hasChangelog": true
   },
   {
     "version": 2317,
     "date": "2025-09-05",
-    "winFile": "setup_ksa_v2025.9.6.2317.exe"
+    "winFile": "setup_ksa_v2025.9.6.2317.exe",
+    "hasChangelog": true
   },
   {
     "version": 2336,
     "date": "2025-09-09",
-    "winFile": "setup_ksa_v2025.9.8.2336.exe"
+    "winFile": "setup_ksa_v2025.9.8.2336.exe",
+    "hasChangelog": true
   },
   {
     "version": 2364,
     "date": "2025-09-12",
-    "winFile": "setup_ksa_v2025.9.9.2364.exe"
+    "winFile": "setup_ksa_v2025.9.9.2364.exe",
+    "hasChangelog": true
   },
   {
     "version": 2376,
     "date": "2025-09-15",
-    "winFile": "setup_ksa_v2025.9.10.2376.exe"
+    "winFile": "setup_ksa_v2025.9.10.2376.exe",
+    "hasChangelog": true
   },
   {
     "version": 2383,
     "date": "2025-09-17",
-    "winFile": "setup_ksa_v2025.9.2.2383.exe"
+    "winFile": "setup_ksa_v2025.9.2.2383.exe",
+    "hasChangelog": true
   },
   {
     "version": 2399,
     "date": "2025-09-18",
-    "winFile": "setup_ksa_v2025.9.12.2399.exe"
+    "winFile": "setup_ksa_v2025.9.12.2399.exe",
+    "hasChangelog": true
   },
   {
     "version": 2404,
     "date": "2025-09-19",
-    "winFile": "setup_ksa_v2025.9.3.2404.exe"
+    "winFile": "setup_ksa_v2025.9.3.2404.exe",
+    "hasChangelog": true
   },
   {
     "version": 2415,
     "date": "2025-09-23",
-    "winFile": "setup_ksa_v2025.9.13.2415.exe"
+    "winFile": "setup_ksa_v2025.9.13.2415.exe",
+    "hasChangelog": true
   },
   {
     "version": 2429,
     "date": "2025-09-26",
-    "winFile": "setup_ksa_v2025.9.4.2429.exe"
+    "winFile": "setup_ksa_v2025.9.4.2429.exe",
+    "hasChangelog": true
   },
   {
     "version": 2441,
     "date": "2025-09-29",
-    "winFile": "setup_ksa_v2025.9.5.2441.exe"
+    "winFile": "setup_ksa_v2025.9.5.2441.exe",
+    "hasChangelog": true
   },
   {
     "version": 2476,
     "date": "2025-10-09",
-    "winFile": "setup_ksa_v2025.10.5.2476.exe"
+    "winFile": "setup_ksa_v2025.10.5.2476.exe",
+    "hasChangelog": true
   },
   {
     "version": 2497,
     "date": "2025-10-10",
-    "winFile": "setup_ksa_v2025.10.6.2497.exe"
+    "winFile": "setup_ksa_v2025.10.6.2497.exe",
+    "hasChangelog": true
   },
   {
     "version": 2502,
     "date": "2025-10-14",
-    "winFile": "setup_ksa_v2025.10.8.2502.exe"
+    "winFile": "setup_ksa_v2025.10.8.2502.exe",
+    "hasChangelog": true
   },
   {
     "version": 2530,
     "date": "2025-10-21",
-    "winFile": "setup_ksa_v2025.10.10.2530.exe"
+    "winFile": "setup_ksa_v2025.10.10.2530.exe",
+    "hasChangelog": true
   },
   {
     "version": 2540,
     "date": "2025-10-23",
-    "winFile": "setup_ksa_v2025.10.11.2540.exe"
+    "winFile": "setup_ksa_v2025.10.11.2540.exe",
+    "hasChangelog": true
   },
   {
     "version": 2547,
     "date": "2025-10-24",
-    "winFile": "setup_ksa_v2025.10.12.2547.exe"
+    "winFile": "setup_ksa_v2025.10.12.2547.exe",
+    "hasChangelog": true
   },
   {
     "version": 2554,
     "date": "2025-10-28",
-    "winFile": "setup_ksa_v2025.10.13.2554.exe"
+    "winFile": "setup_ksa_v2025.10.13.2554.exe",
+    "hasChangelog": true
   },
   {
     "version": 2573,
     "date": "2025-10-29",
-    "winFile": "setup_ksa_v2025.10.5.2573.exe"
+    "winFile": "setup_ksa_v2025.10.5.2573.exe",
+    "hasChangelog": true
   },
   {
     "version": 2584,
     "date": "2025-10-30",
-    "winFile": "setup_ksa_v2025.10.6.2584.exe"
+    "winFile": "setup_ksa_v2025.10.6.2584.exe",
+    "hasChangelog": true
   },
   {
     "version": 2613,
     "date": "2025-10-31",
-    "winFile": "setup_ksa_v2025.10.10.2613.exe"
+    "winFile": "setup_ksa_v2025.10.10.2613.exe",
+    "hasChangelog": true
   },
   {
     "version": 2620,
     "date": "2025-11-02",
-    "winFile": "setup_ksa_v2025.11.2.2620.exe"
+    "winFile": "setup_ksa_v2025.11.2.2620.exe",
+    "hasChangelog": true
   },
   {
     "version": 2634,
     "date": "2025-11-03",
-    "winFile": "setup_ksa_v2025.11.3.2634.exe"
+    "winFile": "setup_ksa_v2025.11.3.2634.exe",
+    "hasChangelog": true
   },
   {
     "version": 2742,
     "date": "2025-11-12",
-    "winFile": "setup_ksa_v2025.11.4.2742.exe"
+    "winFile": "setup_ksa_v2025.11.4.2742.exe",
+    "hasChangelog": true
   },
   {
     "version": 2781,
     "date": "2025-11-13",
-    "winFile": "setup_ksa_v2025.11.2.2781.exe"
+    "winFile": "setup_ksa_v2025.11.2.2781.exe",
+    "hasChangelog": true
   },
   {
     "version": 2789,
     "date": "2025-11-14",
     "winFile": "setup_ksa_v2025.11.3.2789.exe",
-    "comment": "Thank you very much terra.incognita_!"
+    "comment": "Thank you very much terra.incognita_!",
+    "hasChangelog": true
   },
   {
     "version": 2791,
     "date": "2025-11-14",
     "winFile": "setup_ksa_v2025.11.4.2791.exe",
-    "comment": "first really public build"
+    "comment": "first really public build",
+    "hasChangelog": true
   },
   {
     "version": 2819,
     "date": "2025-11-17",
-    "winFile": "setup_ksa_v2025.11.5.2819.exe"
+    "winFile": "setup_ksa_v2025.11.5.2819.exe",
+    "hasChangelog": true
   },
   {
     "version": 2829,
     "date": "2025-11-19",
-    "winFile": "setup_ksa_v2025.11.6.2829.exe"
+    "winFile": "setup_ksa_v2025.11.6.2829.exe",
+    "hasChangelog": true
   },
   {
     "version": 2844,
     "date": "2025-11-20",
-    "winFile": "setup_ksa_v2025.11.7.2844.exe"
+    "winFile": "setup_ksa_v2025.11.7.2844.exe",
+    "hasChangelog": true
   },
   {
     "version": 2847,
     "date": "2025-11-24",
-    "winFile": "setup_ksa_v2025.11.8.2847.exe"
+    "winFile": "setup_ksa_v2025.11.8.2847.exe",
+    "hasChangelog": true
   },
   {
     "version": 2894,
     "date": "2025-11-24",
-    "winFile": "setup_ksa_v2025.11.9.2894.exe"
+    "winFile": "setup_ksa_v2025.11.9.2894.exe",
+    "hasChangelog": true
   },
   {
     "version": 2897,
     "date": "2025-11-24",
-    "winFile": "setup_ksa_v2025.11.5.2897.exe"
+    "winFile": "setup_ksa_v2025.11.5.2897.exe",
+    "hasChangelog": true
   },
   {
     "version": 2915,
     "date": "2025-11-25",
-    "winFile": "setup_ksa_v2025.11.10.2915.exe"
+    "winFile": "setup_ksa_v2025.11.10.2915.exe",
+    "hasChangelog": true
   },
   {
     "version": 2924,
     "date": "2025-11-26",
-    "winFile": "setup_ksa_v2025.11.11.2924.exe"
+    "winFile": "setup_ksa_v2025.11.11.2924.exe",
+    "hasChangelog": true
   },
   {
     "version": 2939,
     "date": "2025-11-27",
-    "winFile": "setup_ksa_v2025.11.6.2939.exe"
+    "winFile": "setup_ksa_v2025.11.6.2939.exe",
+    "hasChangelog": true
   },
   {
     "version": 2945,
     "date": "2025-11-28",
-    "winFile": "setup_ksa_v2025.11.8.2945.exe"
+    "winFile": "setup_ksa_v2025.11.8.2945.exe",
+    "hasChangelog": true
   },
   {
     "version": 2971,
     "date": "2025-12-02",
-    "winFile": "setup_ksa_v2025.12.3.2971.exe"
+    "winFile": "setup_ksa_v2025.12.3.2971.exe",
+    "hasChangelog": true
   },
   {
     "version": 2976,
     "date": "2025-12-02",
-    "winFile": "setup_ksa_v2025.12.5.2976.exe"
+    "winFile": "setup_ksa_v2025.12.5.2976.exe",
+    "hasChangelog": true
   },
   {
     "version": 2991,
     "date": "2025-12-03",
-    "winFile": "setup_ksa_v2025.12.2.2991.exe"
+    "winFile": "setup_ksa_v2025.12.2.2991.exe",
+    "hasChangelog": true
   },
   {
     "version": 2994,
     "date": "2025-12-03",
-    "winFile": "setup_ksa_v2025.12.13.2994.exe"
+    "winFile": "setup_ksa_v2025.12.13.2994.exe",
+    "hasChangelog": true
   },
   {
     "version": 3000,
     "date": "2025-12-04",
-    "winFile": "setup_ksa_v2025.12.14.3000.exe"
+    "winFile": "setup_ksa_v2025.12.14.3000.exe",
+    "hasChangelog": true
   },
   {
     "version": 3011,
     "date": "2025-12-05",
-    "winFile": "setup_ksa_v2025.12.6.3011.exe"
+    "winFile": "setup_ksa_v2025.12.6.3011.exe",
+    "hasChangelog": true
   },
   {
     "version": 3014,
     "date": "2025-12-05",
-    "winFile": "setup_ksa_v2025.12.24.3014.exe"
+    "winFile": "setup_ksa_v2025.12.24.3014.exe",
+    "hasChangelog": true
   },
   {
     "version": 3030,
     "date": "2025-12-09",
-    "winFile": "setup_ksa_v2025.12.8.3030.exe"
+    "winFile": "setup_ksa_v2025.12.8.3030.exe",
+    "hasChangelog": true
   },
   {
     "version": 3041,
     "date": "2025-12-10",
-    "winFile": "setup_ksa_v2025.12.9.3041.exe"
+    "winFile": "setup_ksa_v2025.12.9.3041.exe",
+    "hasChangelog": true
   },
   {
     "version": 3047,
     "date": "2025-12-11",
-    "winFile": "setup_ksa_v2025.12.25.3047.exe"
+    "winFile": "setup_ksa_v2025.12.25.3047.exe",
+    "hasChangelog": true
   },
   {
     "version": 3057,
     "date": "2025-12-12",
-    "winFile": "setup_ksa_v2025.12.10.3057.exe"
+    "winFile": "setup_ksa_v2025.12.10.3057.exe",
+    "hasChangelog": true
   },
   {
     "version": 3072,
     "date": "2025-12-15",
-    "winFile": "setup_ksa_v2025.12.27.3072.exe"
+    "winFile": "setup_ksa_v2025.12.27.3072.exe",
+    "hasChangelog": true
   },
   {
     "version": 3082,
     "date": "2025-12-16",
-    "winFile": "setup_ksa_v2025.12.11.3082.exe"
+    "winFile": "setup_ksa_v2025.12.11.3082.exe",
+    "hasChangelog": true
   },
   {
     "version": 3097,
     "date": "2025-12-17",
-    "winFile": "setup_ksa_v2025.12.29.3097.exe"
+    "winFile": "setup_ksa_v2025.12.29.3097.exe",
+    "hasChangelog": true
   },
   {
     "version": 3103,
     "date": "2025-12-17",
-    "winFile": "setup_ksa_v2025.12.31.3103.exe"
+    "winFile": "setup_ksa_v2025.12.31.3103.exe",
+    "hasChangelog": true
   },
   {
     "version": 3123,
     "date": "2025-12-23",
-    "winFile": "setup_ksa_v2025.12.33.3123.exe"
+    "winFile": "setup_ksa_v2025.12.33.3123.exe",
+    "hasChangelog": true
   },
   {
     "version": 3181,
     "date": "2026-01-08",
-    "winFile": "setup_ksa_v2026.1.2.3181.exe"
+    "winFile": "setup_ksa_v2026.1.2.3181.exe",
+    "hasChangelog": true
   },
   {
     "version": 3194,
     "date": "2026-01-09",
-    "winFile": "setup_ksa_v2026.1.3.3194.exe"
+    "winFile": "setup_ksa_v2026.1.3.3194.exe",
+    "hasChangelog": true
   },
   {
     "version": 3232,
     "date": "2026-01-16",
     "winFile": "setup_ksa_v2026.1.2.3232.exe",
-    "comment": "Thank you very much terra.incognita_!"
+    "comment": "Thank you very much terra.incognita_!",
+    "hasChangelog": true
   },
   {
     "version": 3233,
@@ -571,436 +672,512 @@
   {
     "version": 3249,
     "date": "2026-01-19",
-    "winFile": "setup_ksa_v2026.1.5.3249.exe"
+    "winFile": "setup_ksa_v2026.1.5.3249.exe",
+    "hasChangelog": true
   },
   {
     "version": 3270,
     "date": "2026-01-21",
-    "winFile": "setup_ksa_v2026.1.7.3270.exe"
+    "winFile": "setup_ksa_v2026.1.7.3270.exe",
+    "hasChangelog": true
   },
   {
     "version": 3279,
     "date": "2026-01-22",
-    "winFile": "setup_ksa_v2026.1.8.3279.exe"
+    "winFile": "setup_ksa_v2026.1.8.3279.exe",
+    "hasChangelog": true
   },
   {
     "version": 3293,
     "date": "2026-01-23",
-    "winFile": "setup_ksa_v2026.1.9.3293.exe"
+    "winFile": "setup_ksa_v2026.1.9.3293.exe",
+    "hasChangelog": true
   },
   {
     "version": 3299,
     "date": "2026-01-25",
-    "winFile": "setup_ksa_v2026.1.4.3299.exe"
+    "winFile": "setup_ksa_v2026.1.4.3299.exe",
+    "hasChangelog": true
   },
   {
     "version": 3309,
     "date": "2026-01-27",
-    "winFile": "setup_ksa_v2026.1.5.3309.exe"
+    "winFile": "setup_ksa_v2026.1.5.3309.exe",
+    "hasChangelog": true
   },
   {
     "version": 3329,
     "date": "2026-01-29",
-    "winFile": "setup_ksa_v2026.1.6.3329.exe"
+    "winFile": "setup_ksa_v2026.1.6.3329.exe",
+    "hasChangelog": true
   },
   {
     "version": 3335,
     "date": "2026-01-30",
-    "winFile": "setup_ksa_v2026.1.3.3335.exe"
+    "winFile": "setup_ksa_v2026.1.3.3335.exe",
+    "hasChangelog": true
   },
   {
     "version": 3345,
     "date": "2026-01-30",
-    "winFile": "setup_ksa_v2026.1.4.3345.exe"
+    "winFile": "setup_ksa_v2026.1.4.3345.exe",
+    "hasChangelog": true
   },
   {
     "version": 3353,
     "date": "2026-01-30",
-    "winFile": "setup_ksa_v2026.1.10.3353.exe"
+    "winFile": "setup_ksa_v2026.1.10.3353.exe",
+    "hasChangelog": true
   },
   {
     "version": 3384,
     "date": "2026-02-03",
-    "winFile": "setup_ksa_v2026.2.2.3384.exe"
+    "winFile": "setup_ksa_v2026.2.2.3384.exe",
+    "hasChangelog": true
   },
   {
     "version": 3396,
     "date": "2026-02-04",
-    "winFile": "setup_ksa_v2026.2.2.3396.exe"
+    "winFile": "setup_ksa_v2026.2.2.3396.exe",
+    "hasChangelog": true
   },
   {
     "version": 3419,
     "date": "2026-02-06",
-    "winFile": "setup_ksa_v2026.2.3.3419.exe"
+    "winFile": "setup_ksa_v2026.2.3.3419.exe",
+    "hasChangelog": true
   },
   {
     "version": 3423,
     "date": "2026-02-06",
-    "winFile": "setup_ksa_v2026.2.4.3423.exe"
+    "winFile": "setup_ksa_v2026.2.4.3423.exe",
+    "hasChangelog": true
   },
   {
     "version": 3428,
     "date": "2026-02-08",
-    "winFile": "setup_ksa_v2026.2.5.3428.exe"
+    "winFile": "setup_ksa_v2026.2.5.3428.exe",
+    "hasChangelog": true
   },
   {
     "version": 3454,
     "date": "2026-02-09",
-    "winFile": "setup_ksa_v2026.2.6.3454.exe"
+    "winFile": "setup_ksa_v2026.2.6.3454.exe",
+    "hasChangelog": true
   },
   {
     "version": 3473,
     "date": "2026-02-10",
-    "winFile": "setup_ksa_v2026.2.7.3473.exe"
+    "winFile": "setup_ksa_v2026.2.7.3473.exe",
+    "hasChangelog": true
   },
   {
     "version": 3529,
     "date": "2026-02-13",
-    "winFile": "setup_ksa_v2026.2.9.3529.exe"
+    "winFile": "setup_ksa_v2026.2.9.3529.exe",
+    "hasChangelog": true
   },
   {
     "version": 3538,
     "date": "2026-02-14",
-    "winFile": "setup_ksa_v2026.2.10.3538.exe"
+    "winFile": "setup_ksa_v2026.2.10.3538.exe",
+    "hasChangelog": true
   },
   {
     "version": 3549,
     "date": "2026-02-16",
-    "winFile": "setup_ksa_v2026.2.3.3549.exe"
+    "winFile": "setup_ksa_v2026.2.3.3549.exe",
+    "hasChangelog": true
   },
   {
     "version": 3563,
     "date": "2026-02-17",
-    "winFile": "setup_ksa_v2026.2.5.3563.exe"
+    "winFile": "setup_ksa_v2026.2.5.3563.exe",
+    "hasChangelog": true
   },
   {
     "version": 3592,
     "date": "2026-02-18",
-    "winFile": "setup_ksa_v2026.2.11.3592.exe"
+    "winFile": "setup_ksa_v2026.2.11.3592.exe",
+    "hasChangelog": true
   },
   {
     "version": 3608,
     "date": "2026-02-19",
     "linuxFile": "ksa-linux-x64_v2026.2.8.3608.tar",
-    "comment": "first linux build"
+    "comment": "first linux build",
+    "hasChangelog": true
   },
   {
     "version": 3622,
     "date": "2026-02-19",
     "winFile": "setup_ksa_v2026.2.18.3622.exe",
     "linuxFile": "setup_ksa_v2026.2.18.3622.tar",
-    "comment": "first public(?) linux build"
+    "comment": "first public(?) linux build",
+    "hasChangelog": true
   },
   {
     "version": 3638,
     "date": "2026-02-20",
     "winFile": "setup_ksa_v2026.2.30.3638.exe",
-    "linuxFile": "setup_ksa_v2026.2.30.3638.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.30.3638.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3640,
     "date": "2026-02-20",
     "linuxFile": "setup_ksa_v2026.2.31.3640.tar.gz",
-    "comment": "no windows build due to linux needing an immediate rebuild"
+    "comment": "no windows build due to linux needing an immediate rebuild",
+    "hasChangelog": true
   },
   {
     "version": 3646,
     "date": "2026-02-21",
     "winFile": "setup_ksa_v2026.2.32.3646.exe",
-    "linuxFile": "setup_ksa_v2026.2.32.3646.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.32.3646.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3656,
     "date": "2026-02-23",
     "winFile": "setup_ksa_v2026.2.34.3656.exe",
-    "linuxFile": "setup_ksa_v2026.2.34.3656.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.34.3656.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3667,
     "date": "2026-02-24",
     "winFile": "setup_ksa_v2026.2.35.3667.exe",
-    "linuxFile": "setup_ksa_v2026.2.35.3667.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.35.3667.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3695,
     "date": "2026-02-26",
     "winFile": "setup_ksa_v2026.2.36.3695.exe",
-    "linuxFile": "setup_ksa_v2026.2.36.3695.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.36.3695.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3699,
     "date": "2026-02-26",
     "winFile": "setup_ksa_v2026.2.37.3699.exe",
-    "linuxFile": "setup_ksa_v2026.2.37.3699.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.37.3699.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3713,
     "date": "2026-02-27",
     "winFile": "setup_ksa_v2026.2.38.3713.exe",
-    "linuxFile": "setup_ksa_v2026.2.38.3713.tar.gz"
+    "linuxFile": "setup_ksa_v2026.2.38.3713.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3736,
     "date": "2026-03-03",
     "winFile": "setup_ksa_v2026.3.2.3736.exe",
-    "linuxFile": "setup_ksa_v2026.3.2.3736.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.2.3736.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3759,
     "date": "2026-03-05",
     "winFile": "setup_ksa_v2026.3.3.3759.exe",
-    "linuxFile": "setup_ksa_v2026.3.3.3759.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.3.3759.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3775,
     "date": "2026-03-09",
     "winFile": "setup_ksa_v2026.3.5.3775.exe",
-    "linuxFile": "setup_ksa_v2026.3.5.3775.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.5.3775.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3818,
     "date": "2026-03-14",
     "winFile": "setup_ksa_v2026.3.6.3818.exe",
-    "linuxFile": "setup_ksa_v2026.3.6.3818.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.6.3818.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3848,
     "date": "2026-03-18",
     "winFile": "setup_ksa_v2026.3.7.3848.exe",
-    "linuxFile": "setup_ksa_v2026.3.7.3848.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.7.3848.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3883,
     "date": "2026-03-24",
     "winFile": "setup_ksa_v2026.3.8.3883.exe",
-    "linuxFile": "setup_ksa_v2026.3.8.3883.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.8.3883.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3904,
     "date": "2026-03-27",
     "winFile": "setup_ksa_v2026.3.9.3904.exe",
-    "linuxFile": "setup_ksa_v2026.3.9.3904.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.9.3904.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3916,
     "date": "2026-03-28",
     "winFile": "setup_ksa_v2026.3.11.3916.exe",
-    "linuxFile": "setup_ksa_v2026.3.11.3916.tar.gz"
+    "linuxFile": "setup_ksa_v2026.3.11.3916.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3942,
     "date": "2026-04-01",
     "winFile": "setup_ksa_v2026.4.2.3942.exe",
-    "linuxFile": "setup_ksa_v2026.4.2.3942.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.2.3942.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3957,
     "date": "2026-04-03",
     "winFile": "setup_ksa_v2026.4.3.3957.exe",
-    "linuxFile": "setup_ksa_v2026.4.3.3957.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.3.3957.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3969,
     "date": "2026-04-05",
     "winFile": "setup_ksa_v2026.4.4.3969.exe",
-    "linuxFile": "setup_ksa_v2026.4.4.3969.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.4.3969.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 3999,
     "date": "2026-04-07",
     "winFile": "setup_ksa_v2026.4.5.3999.exe",
-    "linuxFile": "setup_ksa_v2026.4.5.3999.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.5.3999.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4036,
     "date": "2026-04-09",
     "winFile": "setup_ksa_v2026.4.6.4036.exe",
-    "linuxFile": "setup_ksa_v2026.4.6.4036.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.6.4036.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4057,
     "date": "2026-04-10",
     "winFile": "setup_ksa_v2026.4.10.4057.exe",
-    "linuxFile": "setup_ksa_v2026.4.10.4057.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.10.4057.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4082,
     "date": "2026-04-14",
     "winFile": "setup_ksa_v2026.4.13.4082.exe",
-    "linuxFile": "setup_ksa_v2026.4.13.4082.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.13.4082.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4100,
     "date": "2026-04-15",
     "winFile": "setup_ksa_v2026.4.14.4100.exe",
-    "linuxFile": "setup_ksa_v2026.4.14.4100.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.14.4100.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4141,
     "date": "2026-04-17",
     "winFile": "setup_ksa_v2026.4.15.4141.exe",
-    "linuxFile": "setup_ksa_v2026.4.15.4141.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.15.4141.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4170,
     "date": "2026-04-21",
     "winFile": "setup_ksa_v2026.4.16.4170.exe",
-    "linuxFile": "setup_ksa_v2026.4.16.4170.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.16.4170.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4184,
     "date": "2026-04-23",
     "winFile": "setup_ksa_v2026.4.17.4184.exe",
-    "linuxFile": "setup_ksa_v2026.4.17.4184.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.17.4184.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4206,
     "date": "2026-04-28",
     "winFile": "setup_ksa_v2026.4.18.4206.exe",
-    "linuxFile": "setup_ksa_v2026.4.18.4206.tar.gz"
+    "linuxFile": "setup_ksa_v2026.4.18.4206.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4264,
     "date": "2026-05-04",
     "winFile": "setup_ksa_v2026.5.3.4264.exe",
-    "linuxFile": "setup_ksa_v2026.5.3.4264.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.3.4264.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4304,
     "date": "2026-05-05",
     "winFile": "setup_ksa_v2026.5.5.4304.exe",
-    "linuxFile": "setup_ksa_v2026.5.5.4304.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.5.4304.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4337,
     "date": "2026-05-08",
     "winFile": "setup_ksa_v2026.5.6.4337.exe",
-    "linuxFile": "setup_ksa_v2026.5.6.4337.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.6.4337.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4397,
     "date": "2026-05-15",
     "winFile": "setup_ksa_v2026.5.7.4397.exe",
-    "linuxFile": "setup_ksa_v2026.5.7.4397.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.7.4397.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4424,
     "date": "2026-05-19",
     "winFile": "setup_ksa_v2026.5.10.4424.exe",
-    "linuxFile": "setup_ksa_v2026.5.10.4424.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.10.4424.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4462,
     "date": "2026-05-21",
     "winFile": "setup_ksa_v2026.5.11.4462.exe",
-    "linuxFile": "setup_ksa_v2026.5.11.4462.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.11.4462.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4510,
     "date": "2026-05-29",
     "winFile": "setup_ksa_v2026.5.12.4510.exe",
-    "linuxFile": "setup_ksa_v2026.5.12.4510.tar.gz"
+    "linuxFile": "setup_ksa_v2026.5.12.4510.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4531,
     "date": "2026-06-03",
     "winFile": "setup_ksa_v2026.6.2.4531.exe",
-    "linuxFile": "setup_ksa_v2026.6.2.4531.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.2.4531.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4568,
     "date": "2026-06-08",
     "winFile": "setup_ksa_v2026.6.3.4568.exe",
-    "linuxFile": "setup_ksa_v2026.6.3.4568.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.3.4568.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4601,
     "date": "2026-06-11",
     "winFile": "setup_ksa_v2026.6.6.4601.exe",
-    "linuxFile": "setup_ksa_v2026.6.6.4601.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.6.4601.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4631,
     "date": "2026-06-16",
     "winFile": "setup_ksa_v2026.6.7.4631.exe",
-    "linuxFile": "setup_ksa_v2026.6.7.4631.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.7.4631.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4680,
     "date": "2026-06-19",
     "winFile": "setup_ksa_v2026.6.8.4680.exe",
-    "linuxFile": "setup_ksa_v2026.6.8.4680.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.8.4680.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4750,
     "date": "2026-06-27",
     "winFile": "setup_ksa_v2026.6.9.4750.exe",
-    "linuxFile": "setup_ksa_v2026.6.9.4750.tar.gz"
+    "linuxFile": "setup_ksa_v2026.6.9.4750.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4824,
     "date": "2026-07-03",
     "winFile": "setup_ksa_v2026.7.2.4824.exe",
-    "linuxFile": "setup_ksa_v2026.7.2.4824.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.2.4824.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4826,
     "date": "2026-07-03",
     "winFile": "setup_ksa_v2026.7.3.4826.exe",
-    "linuxFile": "setup_ksa_v2026.7.3.4826.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.3.4826.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4860,
     "date": "2026-07-08",
     "winFile": "setup_ksa_v2026.7.4.4860.exe",
-    "linuxFile": "setup_ksa_v2026.7.4.4860.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.4.4860.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4892,
     "date": "2026-07-11",
     "winFile": "setup_ksa_v2026.7.5.4892.exe",
-    "linuxFile": "setup_ksa_v2026.7.5.4892.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.5.4892.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4939,
     "date": "2026-07-16",
     "winFile": "setup_ksa_v2026.7.6.4939.exe",
-    "linuxFile": "setup_ksa_v2026.7.6.4939.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.6.4939.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 4980,
     "date": "2026-07-22",
     "winFile": "setup_ksa_v2026.7.8.4980.exe",
-    "linuxFile": "setup_ksa_v2026.7.8.4980.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.8.4980.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 5018,
     "date": "2026-07-24",
     "winFile": "setup_ksa_v2026.7.9.5018.exe",
-    "linuxFile": "setup_ksa_v2026.7.9.5018.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.9.5018.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 5056,
     "date": "2026-07-28",
     "winFile": "setup_ksa_v2026.7.10.5056.exe",
-    "linuxFile": "setup_ksa_v2026.7.10.5056.tar.gz"
+    "linuxFile": "setup_ksa_v2026.7.10.5056.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 5117,
     "date": "2026-08-01",
     "winFile": "setup_ksa_v2026.8.3.5117.exe",
-    "linuxFile": "setup_ksa_v2026.8.3.5117.tar.gz"
+    "linuxFile": "setup_ksa_v2026.8.3.5117.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 5168,
     "date": "2026-08-05",
     "winFile": "setup_ksa_v2026.8.5.5168.exe",
-    "linuxFile": "setup_ksa_v2026.8.5.5168.tar.gz"
+    "linuxFile": "setup_ksa_v2026.8.5.5168.tar.gz",
+    "hasChangelog": true
   },
   {
     "version": 5261,
     "date": "2026-08-11",
     "winFile": "setup_ksa_v2026.8.19.5261.exe",
-    "linuxFile": "ksa_linux_v2026.8.19.5261.tar.gz"
+    "linuxFile": "ksa_linux_v2026.8.19.5261.tar.gz",
+    "hasChangelog": true
   }
 ]
