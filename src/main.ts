@@ -13,11 +13,11 @@ type Build = { increment: number } & BuildRecord;
 type BuildRecord = {
     version: number;
     date: string;
-    winFile: string | null;
-    winHash: string | null;
-    linuxFile: string | null;
-    linuxHash: string | null;
-    comment: string | null;
+    winFile?: string;
+    winHash?: string;
+    linuxFile?: string;
+    linuxHash?: string;
+    comment?: string;
 };
 
 function buildFromRecord(record: BuildRecord, index: number): Build
@@ -25,7 +25,7 @@ function buildFromRecord(record: BuildRecord, index: number): Build
     return {increment: index + 1, ...record};
 }
 
-const builds: Build[] = (buildRecords as BuildRecord[]).map(buildFromRecord);
+const builds: Build[] = buildRecords.map(buildFromRecord);
 getElement("buildRange").textContent = `Builds ${builds[0].version} => ${builds[builds.length - 1].version}`;
 getElement("siteVersion").textContent = `v${version}`;
 
@@ -99,7 +99,7 @@ if (savedTheme)
 // Build table
 getElement("buildCount").textContent = `${builds.length} builds tracked`;
 
-function buildDownloadCell(filename: string | null, increment: number, label: string, cssClass: string = ""): string
+function buildDownloadCell(filename: string | undefined, increment: number, label: string, cssClass: string = ""): string
 {
     if (!filename)
     {
@@ -110,7 +110,7 @@ function buildDownloadCell(filename: string | null, increment: number, label: st
     return `<a class="dl-link${cls}" href="${href}">↓ ${label}</a>`;
 }
 
-function buildHashCell(hash: string | null): string
+function buildHashCell(hash: string | undefined): string
 {
     if (!hash)
     {
