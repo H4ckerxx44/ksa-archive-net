@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Schema for KSA builds list",
   "type": "array",
-  "contains": {
+  "items": {
     "$ref": "#/definitions/build-entry"
   },
   "definitions": {
