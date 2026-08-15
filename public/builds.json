@@ -1004,7 +1004,6 @@
     "linuxFile": "ksa_linux_v2026.8.19.5261.tar.gz"
   },
   {
-    "version": 9000,
-    "winFile": "not_exists.exe"
+    "version": 1000
   }
 ]
