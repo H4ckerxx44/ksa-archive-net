@@ -1002,8 +1002,5 @@
     "date": "2026-08-11",
     "winFile": "setup_ksa_v2026.8.19.5261.exe",
     "linuxFile": "ksa_linux_v2026.8.19.5261.tar.gz"
-  },
-  {
-    "version": 5261
   }
 ]
