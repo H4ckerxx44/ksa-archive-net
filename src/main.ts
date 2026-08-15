@@ -25,7 +25,7 @@ function buildFromRecord(record: BuildRecord, index: number): Build
     return {increment: index + 1, ...record};
 }
 
-const builds: Build[] = buildRecords.map(buildFromRecord);
+const builds: Build[] = (buildRecords as BuildRecord[]).map(buildFromRecord);
 getElement("buildRange").textContent = `Builds ${builds[0].version} => ${builds[builds.length - 1].version}`;
 getElement("siteVersion").textContent = `v${version}`;
 
