@@ -2,6 +2,11 @@ name: CI
 
 on:
   pull_request:
+    paths:
+      - package.json
+      - package-lock.json
+      - tsconfig.json
+      - src/**
   push:
     branches: [main]
 

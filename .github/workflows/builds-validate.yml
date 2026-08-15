@@ -18,14 +18,15 @@ jobs:
     name: Validate builds.json content
     runs-on: ubuntu-slim
     steps:
+      - uses: actions/checkout@v7
       - name: Valid JSON Check
-        run: jq . ./public/**/*.json
+        run: jq . public/**/*.json
       - name: Install the JSON Schema CLI
         uses: sourcemeta/jsonschema@v16.7.0
       - name: Validate Schemas
-        run: jsonschema metaschema ./public/*.schema.json
+        run: jsonschema metaschema public/*.schema.json
       - name: Validate builds.json
-        run: jsonschema validate ./public/builds.schema.json ./public/builds.json   
+        run: jsonschema validate public/builds.schema.json public/builds.json   
   validate-builds:
     runs-on: ubuntu-slim
     steps:
