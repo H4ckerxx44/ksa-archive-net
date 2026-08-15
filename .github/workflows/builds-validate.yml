@@ -65,9 +65,9 @@ jobs:
       - name: Get Added Builds
         run: |
             jq '
-              ($BASE | .[0] | map({(.version): true}) | add) as $existing |
+              ($BASE | .[0] | map({(.version|tostring): true}) | add) as $existing |
               .[] |
-              select(($existing[.version] // false) | not)
+              select(($existing[.version|tostring] // false) | not)
             ' --slurpfile BASE base/public/builds.json head/public/builds.json -c > added.json
       - name: Validate builds exist in R2
         run: |
