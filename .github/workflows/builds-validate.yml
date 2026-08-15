@@ -3,8 +3,8 @@ name: Validate KSA Builds
 on:
   pull_request:
     paths:
-      - ./public/builds.json
-      - ./public/builds.schema.json
+      - public/builds.json
+      - public/builds.schema.json
 
 permissions:
   contents: read
