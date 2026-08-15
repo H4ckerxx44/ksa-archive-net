@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   schema-check:
-    name: Validate builds.json content
+    name: Schema Check
     runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@v7
@@ -23,11 +23,12 @@ jobs:
         run: jq . public/builds.json
       - name: Install the JSON Schema CLI
         uses: sourcemeta/jsonschema@v16.7.0
-      - name: Validate Schemas
-        run: jsonschema metaschema public/*.schema.json
+      - name: Validate Schema
+        run: jsonschema metaschema public/builds.schema.json
       - name: Validate builds.json
         run: jsonschema validate public/builds.schema.json public/builds.json   
   validate-builds:
+    name: Validate Build Entries
     runs-on: ubuntu-slim
     steps:
       - name: Checkout HEAD
