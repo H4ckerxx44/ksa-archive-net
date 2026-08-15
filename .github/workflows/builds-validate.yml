@@ -2,8 +2,9 @@ name: Validate KSA Builds
 
 on:
   pull_request:
-  push:
-    branches: [main]
+    paths:
+      - ./public/builds.json
+      - ./public/builds.schema.json
 
 permissions:
   contents: read
@@ -13,7 +14,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validate:
+  schema-check:
+    name: Validate builds.json content
     runs-on: ubuntu-slim
     steps:
       - name: Valid JSON Check
@@ -40,7 +42,7 @@ jobs:
           sparse-checkout: ./public/builds.json
           fetch-depth: 1
           ref: '${{ github.event.pull_request.base.ref }}'
-      - name: Validate Unique Builds
+      - name: Validate Unique
         run: |
             jq '
               group_by(.version) | 
@@ -48,7 +50,7 @@ jobs:
               if length > 1 then 
                 error("multiple entries for version \(.[0].version)") 
               else empty end' head/public/builds.json
-      - name: Validate Sorted Builds 
+      - name: Validate Order
         run: |
             jq '
               reduce range(1; length) as $i
@@ -59,13 +61,13 @@ jobs:
                  else
                    null
                  end)' head/public/builds.json
-      - name: Find Added Builds
+      - name: Get Added Builds
         run: |
             jq '
               ($BASE | .[0] | map({(.version): true}) | add) as $existing |
               .[] |
               select(($existing[.version] // false) | not)
-            ' --slurp-file BASE ./base/public/builds.json ./head/public/builds.json -c > added.json
+            ' --slurpfile BASE ./base/public/builds.json ./head/public/builds.json -c > added.json
       - name: Validate builds exist in R2
         run: |
           R2_URL="https://files.ksa-archive.net/builds/"
