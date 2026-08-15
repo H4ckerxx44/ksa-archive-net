@@ -67,7 +67,7 @@ jobs:
               ($BASE | .[0] | map({(.version): true}) | add) as $existing |
               .[] |
               select(($existing[.version] // false) | not)
-            ' --slurpfile BASE ./base/public/builds.json ./head/public/builds.json -c > added.json
+            ' --slurpfile BASE base/public/builds.json head/public/builds.json -c > added.json
       - name: Validate builds exist in R2
         run: |
           R2_URL="https://files.ksa-archive.net/builds/"
