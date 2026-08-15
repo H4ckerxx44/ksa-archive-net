@@ -55,11 +55,11 @@ jobs:
       - name: Validate Order
         run: |
             jq '
+              . as $builds |
               reduce range(1; length) as $i
                 (null;
-                 if . != null then .
-                 elif .[$i].version < .[$i-1].version then
-                   error("version \(.[$i].version) is specified after version \(.[$i-1].version)")
+                 if $builds[$i].version < $builds[$i-1].version then
+                   error("version \($builds[$i].version) is specified after version \($builds[$i-1].version)")
                  else
                    null
                  end)' head/public/builds.json
