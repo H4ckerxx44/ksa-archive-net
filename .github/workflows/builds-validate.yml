@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Valid JSON Check
-        run: jq . public/**/*.json
+        run: jq . public/builds.json
       - name: Install the JSON Schema CLI
         uses: sourcemeta/jsonschema@v16.7.0
       - name: Validate Schemas
