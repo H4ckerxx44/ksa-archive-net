@@ -44,9 +44,15 @@
           "description": "An additional comment for this build",
           "type": "string"
         },
-        "hasChangelog": {
-          "description": "If this version has an archived changelog entry",
-          "type": "boolean"
+        "changelog": {
+          "description": "URL/Ref to version changelog",
+          "oneOf": [
+            {
+              "description": "A link to KSA wiki version",
+              "type": "string",
+              "pattern": "https://kittenspaceagency.wiki.gg/wiki/Version_[\\d\\.]+"
+            }
+          ]
         }
       }
     }

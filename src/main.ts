@@ -18,7 +18,7 @@ type BuildRecord = {
     linuxFile: string | null;
     linuxHash: string | null;
     comment: string | null;
-    hasChangelog: boolean | null;
+    changelog: string | null;
 };
 
 function buildFromRecord(record: BuildRecord, index: number): Build
