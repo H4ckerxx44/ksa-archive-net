@@ -1,5 +1,7 @@
 /builds.json
   Content-Type: application/json
+  Cache-Control: public, max-age=600
 
 /builds.schema.json
   Content-Type: application/json
+  Cache-Control: public, max-age=3600
