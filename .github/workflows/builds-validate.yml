@@ -1,0 +1,120 @@
+name: Validate KSA Builds
+
+on:
+  pull_request:
+    paths:
+      - public/builds.json
+      - public/builds.schema.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  schema-check:
+    name: Schema Check
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v7
+      - name: Valid JSON Check
+        run: jq . public/builds.json
+      - name: Install the JSON Schema CLI
+        uses: sourcemeta/jsonschema@v16.7.0
+      - name: Validate Schema
+        run: jsonschema metaschema public/builds.schema.json
+      - name: Validate builds.json
+        run: jsonschema validate public/builds.schema.json public/builds.json   
+  validate-builds:
+    name: Validate Build Entries
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout HEAD
+        uses: actions/checkout@v7
+        with:
+          path: head
+          sparse-checkout: ./public/builds.json
+          fetch-depth: 1
+      - name: Checkout BASE
+        uses: actions/checkout@v7
+        with:
+          path: base
+          sparse-checkout: ./public/builds.json
+          fetch-depth: 1
+          ref: '${{ github.event.pull_request.base.ref }}'
+      - name: Validate Unique
+        run: |
+            jq '
+              group_by(.version) | 
+              .[] | 
+              if length > 1 then 
+                error("multiple entries for version \(.[0].version)") 
+              else empty end' head/public/builds.json
+      - name: Validate Order
+        run: |
+            jq '
+              . as $builds |
+              reduce range(1; length) as $i
+                (null;
+                 if $builds[$i].version < $builds[$i-1].version then
+                   error("version \($builds[$i].version) is specified after version \($builds[$i-1].version)")
+                 else
+                   null
+                 end)' head/public/builds.json
+      - name: Get Added Builds
+        run: |
+            jq '
+              ($BASE | .[0] | map({(.version|tostring): true}) | add) as $existing |
+              .[] |
+              select(($existing[.version|tostring] // false) | not)
+            ' --slurpfile BASE base/public/builds.json head/public/builds.json -c | tee added.json
+      - name: Validate builds exist in R2
+        run: |
+          R2_URL="https://files.ksa-archive.net/builds"
+          MISSING=0
+      
+          while read -r build; do
+            VERSION_NUM=$(jq -r '.version' <<< "$build")
+            WIN_FILE=$(jq -r '.winFile // ""' <<< "$build")
+            LINUX_FILE=$(jq -r '.linuxFile // ""' <<< "$build")
+      
+            if [ -n "$WIN_FILE" ]; then
+              STATUS=$(curl -sI "${R2_URL}/${VERSION_NUM}/${WIN_FILE}" \
+                -o /dev/null -w '%{http_code}')
+              case "$STATUS" in
+                200) echo "builds/$VERSION_NUM/$WIN_FILE is present in R2." >&2 ;;
+                404)
+                  echo "builds/$VERSION_NUM/$WIN_FILE is missing from R2." >&2
+                  MISSING=$((MISSING + 1))
+                  ;;
+                *)
+                  echo "failed to check builds/$VERSION_NUM/$WIN_FILE." >&2
+                  exit 1
+                  ;;
+              esac
+            fi
+      
+            if [ -n "$LINUX_FILE" ]; then
+              STATUS=$(curl -sI "${R2_URL}/${VERSION_NUM}/${LINUX_FILE}" \
+                -o /dev/null -w '%{http_code}')
+              case "$STATUS" in
+                200) echo "builds/$VERSION_NUM/$LINUX_FILE is present in R2." >&2 ;;
+                404)
+                  echo "builds/$VERSION_NUM/$LINUX_FILE is missing from R2." >&2
+                  MISSING=$((MISSING + 1))
+                  ;;
+                *)
+                  echo "failed to check builds/$VERSION_NUM/$LINUX_FILE." >&2
+                  exit 1
+                  ;;
+              esac
+            fi
+          done < added.json
+      
+          if [ "$MISSING" -gt 0 ]; then
+            echo "$MISSING file(s) are missing from R2"
+            exit 2
+          fi
+        
