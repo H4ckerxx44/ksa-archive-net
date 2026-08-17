@@ -260,7 +260,7 @@ h1 .agency { color: var(--accent); }
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 920px;
+    min-width: 1000px;
 }
 
 thead tr {
@@ -304,6 +304,35 @@ td {
 .build-num {
     color: var(--text-strong);
     font-weight: 700;
+}
+
+.changelog-cell {
+    white-space: nowrap;
+}
+
+.changelog-btn {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    padding: 1px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.changelog-btn:hover {
+    background: rgba(91, 140, 255, 0.1);
+    border-color: rgba(91, 140, 255, 0.4);
+    color: var(--accent2);
 }
 
 .build-date { color: var(--muted); font-size: 12px; white-space: nowrap; }
