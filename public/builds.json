@@ -1008,5 +1008,11 @@
     "date": "2026-08-23",
     "winFile": "setup_ksa_v2026.8.22.5348.exe",
     "linuxFile": "ksa_linux_v2026.8.22.5348.tar.gz"
+  },
+  {
+    "version": 5400,
+    "date": "2026-09-02",
+    "winFile": "setup_ksa_v2026.9.4.5400.exe",
+    "linuxFile": "ksa_linux_v2026.9.4.5400.tar.gz"
   }
 ]
