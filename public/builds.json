@@ -1014,5 +1014,11 @@
     "date": "2026-09-02",
     "winFile": "setup_ksa_v2026.9.4.5400.exe",
     "linuxFile": "ksa_linux_v2026.9.4.5400.tar.gz"
+  },
+  {
+    "version": 5402,
+    "date": "2026-09-02",
+    "winFile": "setup_ksa_v2026.9.7.5402.exe",
+    "linuxFile": "ksa_linux_v2026.9.7.5402.tar.gz"
   }
 ]
