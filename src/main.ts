@@ -18,6 +18,7 @@ type BuildRecord = {
     linuxFile?: string;
     linuxHash?: string;
     comment?: string;
+    changelog?: string;
 };
 
 function buildFromRecord(record: BuildRecord, index: number): Build
@@ -121,9 +122,29 @@ function buildHashCell(hash: string | undefined): string
     return `<span class="hash-value" title="${hash}">${display}</span>`;
 }
 
+function escapeHtml(text: string): string
+{
+    return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function buildChangelogCell(changelog: string | undefined): string
+{
+    if (!changelog)
+    {
+        return "";
+    }
+
+    return `<a class="changelog-btn" href="${escapeHtml(changelog)}" target="_blank" rel="noopener noreferrer">Changelog</a>`;
+}
+
 function renderBuildRow(build: Build): HTMLTableRowElement
 {
-    const {increment, version, date, winFile, winHash, linuxFile, linuxHash, comment} = build;
+    const {increment, version, date, winFile, winHash, linuxFile, linuxHash, comment, changelog} = build;
 
     const tr = document.createElement("tr");
 
@@ -136,6 +157,7 @@ function renderBuildRow(build: Build): HTMLTableRowElement
        <td class="ver-num">${increment}</td>
        <td class="build-num">${version}</td>
         <td class="build-date">${date}</td>
+        <td class="changelog-cell">${buildChangelogCell(changelog)}</td>
         <td>${comment ? `<span class="comment-tag">${comment}</span>` : ""}</td>
         <td>${buildDownloadCell(winFile, version, "Windows")}</td>
         <td class="hash-cell">${buildHashCell(winHash)}</td>
