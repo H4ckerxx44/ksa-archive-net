@@ -22,7 +22,7 @@ jobs:
       - name: Valid JSON Check
         run: jq . public/builds.json
       - name: Install the JSON Schema CLI
-        uses: sourcemeta/jsonschema@v16.7.0
+        uses: sourcemeta/jsonschema@v17.2.1
       - name: Validate Schema
         run: jsonschema metaschema public/builds.schema.json
       - name: Validate builds.json
