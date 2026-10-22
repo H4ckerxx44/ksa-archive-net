@@ -10,6 +10,7 @@
     "prepare": "git config core.hooksPath .githooks"
   },
   "devDependencies": {
+    "@rslint/core": "^0.9.5",
     "typescript": "~6.0.2",
     "vite": "8.3.3"
   }
