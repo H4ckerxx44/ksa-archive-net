@@ -1062,5 +1062,11 @@
     "date": "2026-10-29",
     "winFile": "setup_ksa_v2026.10.25.5707.exe",
     "linuxFile": "ksa_linux_v2026.10.25.5707.tar.gz"
+  },
+  {
+  "version": 5801,
+  "date": "2026-11-08",
+  "winFile": "setup_ksa_v2026.11.10.5801.exe",
+  "linuxFile": "ksa_linux_v2026.11.10.5801.tar.gz"
   }
 ]
